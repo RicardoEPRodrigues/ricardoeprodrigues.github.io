@@ -19,7 +19,7 @@ resume: false
 resume-external: true
 resume-url: https://google.com/?q=my+resume
 
-url: https://ricardoeprodrigues.github.io/
+url: https://ricardoeprodrigues.github.io
 # your url: https://USERNAME.github.io
 
 permalink: /:title/
