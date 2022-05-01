@@ -20,5 +20,5 @@ Part of my work not currently portrayed on the website is my academic endeavors,
 * [Orcid: 0000-0003-0158-1460](https://orcid.org/0000-0003-0158-1460)
 * [Google Scholar Profile](https://scholar.google.pt/citations?hl=en&user=klEnEUwAAAAJ)
 
-Best regards,
+Regards,
 Ricardo Rodrigues
