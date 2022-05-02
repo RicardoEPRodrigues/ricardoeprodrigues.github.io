@@ -18,9 +18,9 @@ accent-color-dark: "#41A700"
 
 # If you want to include your resume, set to true
 # and specify source (external or local).
-resume: false
-resume-external: true
-resume-url: https://google.com/?q=my+resume
+resume: true
+resume-external: false
+resume-url: assets/CV-Ricardo-Rodrigues.pdf
 
 url: https://ricardoeprodrigues.github.io
 # your url: https://USERNAME.github.io
@@ -36,22 +36,13 @@ permalink: /:title/
 #   categories: [blog, project] # only show disqus for posts that have these categories
 
 # if you don't have any of social below, comment the line
-# facebook: myfacebook
 twitter: Quenestil
-# instagram: myinstagram
-# pinterest: mypinterest
 linkedin: ricardoeprodrigues
-# youtube: myyoutube
-# spotify: myspotify
 github: RicardoEPRodrigues
-gitlab: RicardoEPRodrigues
-# lastfm: mylastfm
-stackoverflow: 3768496/ricardo-rodrigues
-# quora: userquora
-reddit: RicardoEPRodrigues
-# medium: medium
-# vimeo: myvimeo
-# lanyrd: mylanyrd
+gitlab: RicardoEPRodrigues # Not available
+stackoverflow: 3768496/ricardo-rodrigues # Not available
+reddit: RicardoEPRodrigues # Not available
+itchio: quenestil # Not available
 email: ricardo.proenca.rodrigues@tecnico.ulisboa.pt
 
 authors:
@@ -65,7 +56,7 @@ authors:
 # do you want a larger site? change the option below
 # options: [normal, large] | default: normal
 # normal = 560px / large = 810px
-width: normal
+width: large
 
 # if you do/don't need pagination, toggle 'enabled' between true/false below
 pagination:
