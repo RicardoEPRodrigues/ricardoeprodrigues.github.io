@@ -23,19 +23,29 @@ layout: compress
     <script src="https://kit.fontawesome.com/d9b09040a7.js" crossorigin="anonymous"></script>
 
     <style>
-    
-    {% if site.dark-theme == "auto" %}
-        {% capture scss_sheet %}
+
+    {% capture scss_sheet %}
+        {% if site.accent-color %}
+        $delta: {{ site.accent-color }};
+        {% endif %}
+
+        {% if site.dark-theme == "auto" %}
+                {% include style.scss %}
+                @media (prefers-color-scheme: dark) {
+                    {% if site.accent-color-dark %}
+                    $delta: {{ site.accent-color-dark }};
+                    {% endif %}
+                    {% include style-dark.scss %}
+                }
+        {% elsif site.dark-theme %}
+            {% if site.accent-color-dark %}
+            $delta: {{ site.accent-color-dark }};
+            {% endif %}
+            {% include style-dark.scss %}
+        {% else %}
             {% include style.scss %}
-            @media (prefers-color-scheme: dark) {
-                {% include style-dark.scss %}
-            }
-        {% endcapture %}
-    {% elsif site.dark-theme %}
-        {% capture scss_sheet %}{% include style-dark.scss %}{% endcapture %}
-    {% else %}
-        {% capture scss_sheet %}{% include style.scss %}{% endcapture %}
-    {% endif %}
+        {% endif %}
+    {% endcapture %}
 
     {{ scss_sheet | scssify }}
     </style>
