@@ -109,6 +109,7 @@ plugins:
   - jekyll-admin
   - jemoji
   - jekyll-paginate-v2
+  - jekyll-target-blank
 
 compress_html:
   ignore:
