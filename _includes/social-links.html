@@ -31,6 +31,18 @@
         </a>
     {% endif %}
 
+    {% if site.itchio %}
+        <a class="link" data-title="{{ site.itchio }}.itch.io/" href="https://{{ site.itchio }}.itch.io/" target="_blank"  rel="noopener">
+            <i class="fa-brands fa-itch-io"></i>
+        </a>
+    {% endif %}
+
+    {% if site.twitch %}
+        <a class="link" data-title="www.twitch.tv/{{ site.twitch }}" href="https://www.twitch.tv/{{ site.twitch }}" target="_blank"  rel="noopener">
+            <i class="fa-brands fa-twitch"></i>
+        </a>
+    {% endif %}
+
     {% if site.email %}
         <a class="link" data-title="{{ site.email }}" href="mailto:{{ site.email }}"  rel="noopener">
             <i class="fa-regular fa-envelope"></i>
