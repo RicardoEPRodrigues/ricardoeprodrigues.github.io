@@ -1,10 +1,15 @@
 body, html
 	font-size: 62.5%
 
+html
+	min-height: 100%
+
 body
 	font: 16px $fontSans
 	color: $alpha
-	background: $omega
+	background: $bg
+	min-height: 100vh
+	margin: 0
 
 h1, h2, h3, h4
 	font-family: $fontSans
@@ -127,6 +132,7 @@ pre
 	height: 100%
 	width: 96%
 	margin: 0 auto
+	overflow: auto
 
 	@media #{$mobile}
 		width: 88%

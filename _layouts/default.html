@@ -26,14 +26,23 @@ layout: compress
 
     {% capture scss_sheet %}
         {% if site.accent-color %}
-        $delta: {{ site.accent-color }};
+            $delta: {{ site.accent-color }};
+        {% endif %}
+        {% if site.background %}
+            $bg: {{ site.background }};
         {% endif %}
 
         {% if site.dark-theme == "auto" %}
                 {% include style.scss %}
+                {% comment %} Reset scss variables. {% endcomment %}
+                $delta: null;
+                $bg: null;
                 @media (prefers-color-scheme: dark) {
                     {% if site.accent-color-dark %}
-                    $delta: {{ site.accent-color-dark }};
+                        $delta: {{ site.accent-color-dark }};
+                    {% endif %}
+                    {% if site.background-dark %}
+                        $bg: {{ site.background-dark }};
                     {% endif %}
                     {% include style-dark.scss %}
                 }
