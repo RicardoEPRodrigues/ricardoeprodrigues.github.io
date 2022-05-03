@@ -25,6 +25,12 @@
         </a>
     {% endif %}
 
+    {% if site.orcid %}
+        <a class="link" data-title="orcid.org/{{ site.orcid }}" href="https://orcid.org/{{ site.orcid }}" target="_blank"  rel="noopener">
+            <i class="fa-brands fa-orcid"></i>
+        </a>
+    {% endif %}
+
     {% if site.github %}
         <a class="link" data-title="github.com/{{ site.github }}" href="https://github.com/{{ site.github }}" target="_blank"  rel="noopener">
             <i class="fa-brands fa-github"></i>
