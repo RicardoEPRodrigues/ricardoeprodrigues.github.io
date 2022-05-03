@@ -3,7 +3,6 @@ title: Welcome to my website
 layout: post
 date: 2022-05-01 20:00
 headerImage: false
-projects: false
 description: A welcoming message from me to you.
 category: blog
 author: ricardorodrigues
