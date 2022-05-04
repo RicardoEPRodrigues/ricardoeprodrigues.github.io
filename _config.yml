@@ -72,6 +72,10 @@ collections:
   projects:
     output: true
 
+feed:
+  collections:
+    - projects
+
 # if you don't need projects, comment the *projects* configs below
 show_projects: true
 
