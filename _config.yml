@@ -1,9 +1,9 @@
 # main text of home
 title: Ricardo Rodrigues
-bio: Just a man that likes games and adventures
+bio: Boyfriend and friend to great people. Game Developer, Ph.D. student, AI Researcher
 
 # twitter summary info
-description: A personal website about technology and stuff
+description: A personal website about a Game Developer, Ph.D. student, and AI Researcher
 
 # if it's an external image, update below for true
 # better with square images
@@ -49,7 +49,7 @@ email: ricardo.proenca.rodrigues@tecnico.ulisboa.pt
 authors:
   ricardorodrigues:
     name: Ricardo Rodrigues
-    bio: Just a man that likes games and adventures
+    bio: Boyfriend and Friend to great people, Game Developer, Ph.D. student, AI Researcher
     external-image: false
     picture: assets/images/profile.jpg
     twitter: Quenestil
