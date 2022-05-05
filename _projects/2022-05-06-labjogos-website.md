@@ -1,7 +1,7 @@
 ---
 title: Labjogos Website
 layout: post
-date: 2022-05-06 00:50
+date: 2022-05-05 00:50
 tag: 
 - webdev
 - gamedev
