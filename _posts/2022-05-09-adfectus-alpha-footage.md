@@ -2,7 +2,7 @@
 layout: post
 category: blog
 title: Adfectus Alpha Footage
-date: 2022-05-09T22:15:33.818Z
+date: 2022-05-09T23:30:43.813Z
 description: Link to a gameplay video of Adfectus Alpha
 headerImage: false
 tag:
