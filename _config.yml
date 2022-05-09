@@ -115,7 +115,6 @@ plugins:
   - jekyll-seo-tag
   - jekyll-gist
   - jekyll-feed
-  - jekyll-admin
   - jemoji
   - jekyll-paginate-v2
   - jekyll-target-blank

@@ -1,0 +1,46 @@
+backend:
+  name: github
+  repo: RicardoEPRodrigues/ricardoeprodrigues.github.io
+  branch: gh-pages
+  site_domain: lucent-moxie-ce5715.netlify.app
+
+
+media_folder: "assets/uploads" # Media files will be stored in the repo under images/uploads
+
+collections:
+  - name: "blog" # Used in routes, e.g., /admin/collections/blog
+    label: "Blog" # Used in the UI
+    folder: "_posts" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    editor:
+      preview: false
+    fields: # The fields for each document, usually in front matter
+      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
+      - {label: "Category", name: "category", widget: "hidden", default: "blog"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Description", name: "description", widget: "string"}
+      - {label: "Header Image", name: "headerImage", widget: "image", default: false}
+      - {label: "Tags", name: "tag", widget: "list", optional: true}
+      - {label: "Author", name: "author", widget: "string", default: "ricardorodrigues"}
+      - {label: "External Link", name: "externalLink", widget: "string", default: false}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "projects" # Used in routes, e.g., /admin/collections/blog
+    label: "Projects" # Used in the UI
+    folder: "_projects" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    editor:
+      preview: false
+    fields: # The fields for each document, usually in front matter
+      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
+      - {label: "Category", name: "category", widget: "hidden", default: "project"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Description", name: "description", widget: "string"}
+      - {label: "Header Image", name: "headerImage", widget: "image", default: false}
+      - {label: "Tags", name: "tag", widget: "list", optional: true}
+      - {label: "Author", name: "author", widget: "string", default: "ricardorodrigues"}
+      - {label: "External Link", name: "externalLink", widget: "string", default: false}
+      - {label: "Body", name: "body", widget: "markdown"}
