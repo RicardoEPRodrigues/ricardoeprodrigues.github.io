@@ -5,7 +5,7 @@ date: 2022-05-05 23:00
 tag: 
 - charity
 - webdev
-image: /assets/images/SopaParaTodosLogo.png
+image: /assets/uploads/SopaParaTodosLogo.png
 headerImage: true
 star: false
 description: "Sopa para Todos is a movement with the purpose of helping fight hunger."
