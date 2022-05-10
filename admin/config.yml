@@ -33,10 +33,10 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Description", name: "description", widget: "string"}
-      - {label: "Header Image", name: "headerImage", widget: "image", optional: true}
-      - {label: "Tags", name: "tag", widget: "list", optional: true}
+      - {label: "Header Image", name: "headerImage", widget: "image", required: false}
+      - {label: "Tags", name: "tag", widget: "list", required: false}
       - {label: "Author", name: "author", widget: "string", default: "ricardorodrigues"}
-      - {label: "External Link", name: "externalLink", widget: "string", optional: true}
+      - {label: "External Link", name: "externalLink", widget: "string", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "projects" # Used in routes, e.g., /admin/collections/blog
     label: "Projects" # Used in the UI
@@ -51,8 +51,8 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Description", name: "description", widget: "string"}
-      - {label: "Header Image", name: "headerImage", widget: "image", optional: true}
-      - {label: "Tags", name: "tag", widget: "list", optional: true}
+      - {label: "Header Image", name: "headerImage", widget: "image", required: false}
+      - {label: "Tags", name: "tag", widget: "list", required: false}
       - {label: "Author", name: "author", widget: "string", default: "ricardorodrigues"}
-      - {label: "External Link", name: "externalLink", widget: "string", optional: true}
+      - {label: "External Link", name: "externalLink", widget: "string", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
