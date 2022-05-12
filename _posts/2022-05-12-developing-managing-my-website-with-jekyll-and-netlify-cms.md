@@ -44,7 +44,7 @@ But it wasn't enough! So my programmer's veins kicked in and I added more social
     <a class="button">Another Button</a>
 </div>
 
-If you want to use my template and add them to your posts and pages you can use this code snippet:
+If you want to use [my template](https://github.com/RicardoEPRodrigues/ricardoeprodrigues.github.io/) and add them to your posts and pages you can use this code snippet:
 
 ```html
 <div class="buttons-container">
