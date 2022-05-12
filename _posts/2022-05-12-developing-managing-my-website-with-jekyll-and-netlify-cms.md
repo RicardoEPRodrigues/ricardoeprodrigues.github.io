@@ -1,7 +1,7 @@
 ---
 layout: post
 category: blog
-title: Developing/Managing my Website with Jekyll and Netlify CMS
+title: Developing my Website with Jekyll and Netlify CMS
 date: 2022-05-12T21:55:51.917Z
 description: How I made the website you are on by using a Jekyll template and Netlify CMS.
 tag:
