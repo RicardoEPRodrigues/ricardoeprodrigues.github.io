@@ -138,9 +138,7 @@ collections:
     label: "Blog" # Used in the UI
     folder: "_posts" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-{% raw %}
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-{% endraw %}
+    slug: {% raw %}"{{year}}-{{month}}-{{day}}-{{slug}}"{% endraw %} # Filename template, e.g., YYYY-MM-DD-title.md
     editor:
       preview: false # This avoids ill-rendered pages in the editor for Jekyll.
     fields: # The fields for each document, usually in front matter
