@@ -25,7 +25,7 @@ Following the website setup, I got everything going and finally had my own websi
 
 ## My Jekyll Template
 
-*I wanted more!* After going through some of the code and how things work, I started feeling like tweaking and changing things, making it my own version of the template (the source code can be found on [my Github page](https://github.com/RicardoEPRodrigues/ricardoeprodrigues.github.io/)). My designer veins decided to add an accent color (the text selection color is also changed), then some "cool" backgrounds, and I made it so the theme changes depending on system preference (now it syncs with the dark theme, \*\*groovy\*\*). Just add some values to your config file and there you go!
+*I wanted more!* After going through some of the code and how things work, I started feeling like tweaking and changing things, making it my own version of the template (the source code can be found on [my Github page](https://github.com/RicardoEPRodrigues/ricardoeprodrigues.github.io/)). My designer veins decided to add an accent color (the text selection color is also changed), then some "cool" backgrounds, and I made it so the theme changes depending on system preference (now it syncs with the dark theme, **\~\~groovy\~\~**). Just add some values to your config file and there you go!
 
 ```yaml
 # These are the definitions I use on the website.
@@ -77,7 +77,7 @@ Once finished, leave the page in the background. You will need the **Client ID**
 
 ### Creating a Netlify Site
 
-*Taken from [Link 2](https://cnly.github.io/2018/04/14/just-3-steps-adding-netlify-cms-to-existing-github-pages-site-within-10-minutes.html)*.
+*Originally from [Link 2](https://cnly.github.io/2018/04/14/just-3-steps-adding-netlify-cms-to-existing-github-pages-site-within-10-minutes.html)*.
 
 Go to [Netlify](https://app.netlify.com/account/sites) and create a new site from… *any* repo. We are not really using Netlify to host that, anyway. (I used the Github Pages repo, but it doesn't really matter.)
 
