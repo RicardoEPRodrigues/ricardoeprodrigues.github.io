@@ -1,7 +1,7 @@
 ---
 layout: post
 category: blog
-title: Combat in Adfectus / Collisions in UE5
+title: Collisions and Damage in UE5 | Combat in Adfectus
 date: 2022-05-16T21:58:40.044Z
 description: An overview on how the combat mechanics and object collisions work
   in my game Adfectus.
