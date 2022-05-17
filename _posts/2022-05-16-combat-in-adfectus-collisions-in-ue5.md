@@ -169,7 +169,7 @@ Note how it ignores other weapons and overlaps only the Pawn. Looking back, we h
 
 For the weapon, this is most of what you need. You can already create a weapon and have the weapon deal damage.
 
-## ***Taking Damage***
+## Taking Damage
 
 Now, to the objects we want to take damage (e.g. the main character, destructible environment, etc.), we need to override the function `TakeDamage()` and deal with the received damage. Here follows a snippet of how I implement this in my main characters.
 
