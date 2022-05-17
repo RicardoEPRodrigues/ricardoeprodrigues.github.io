@@ -230,4 +230,6 @@ In the function, we reduce the health by the amount of damage taken, and if the 
 
 With this tutorial, we learned how to implement a simple combat mechanic based on two engine mechanisms: the Collision Detection and the Damage System. In summary, we create a weapon that holds a static mesh, when a collision between the mesh and other objects is detected, the weapon deals damage to the other object. Finally, implement the behavior to deal with the damage received on relevant objects and the loop is complete!
 
+***(WIP - Add video showcasing collision)***
+
 I hope this tutorial helps you and feel free to leave a comment with questions and suggestions.
