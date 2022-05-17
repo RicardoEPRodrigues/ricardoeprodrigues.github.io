@@ -153,9 +153,21 @@ void AWeapon::OnBeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor* O
 
 Now we get to the interesting part. We define a simple function that lets us change when the weapon deals damage, and then, when colliding with another actor, we deal damage to it. The interesting part here is that we are using the [UE4 Damage System](https://www.unrealengine.com/en-US/blog/damage-in-ue4) (I advise you to look into that page to have a better understanding of what the system does), in essence, it is an abstraction of giving/receiving damage. An object that deals damage does not need to care about how the damage is dealt with and the object receiving it only needs to care about handling the damage.
 
-For the weapon, code-wise, this is most of what you need. You can already create a weapon and have the weapon deal damage.
+### Collision Profiles
 
-***(WIP - Talk about Collision profiles)***
+Before moving on, let's just take a quick look at how I dealt with collisions between weapons and other objects in UE5 (to learn more and in greater detail visit the UE5 Wiki on [Collision](https://docs.unrealengine.com/5.0/en-US/collision-in-unreal-engine---overview/) and their [Channels](https://docs.unrealengine.com/5.0/en-US/add-a-custom-object-type-to-your-project-in-unreal-engine/)). We want the weapon to hit PhysicsBodies (e.g. a ball you can move around), overlap with Pawn (e.g. Player Characters and NPCs), and be ignored by the camera. To implement this behavior we need to (1) create an object channel called Weapon, and (2) design a collision preset to ease its use.
+
+To create an Object Channel, visit `Project Settings > Collision > Object Channels`, here we can create a new channel and let its default response be `Block`. It should look something like this:
+
+![Weapon Object Channel](/assets/uploads/screenshot-from-2022-05-17-22-45-51.png "Weapon Object Channel")
+
+Now let us create our collision preset. In `Project Settings > Collision > Preset`, click `New...` and copy the following settings:
+
+![Weapon Collision Preset](/assets/uploads/screenshot-from-2022-05-17-22-49-55.png "Weapon Collision Preset")
+
+Note how it ignores other weapons and overlaps only the Pawn. Looking back, we have already assigned the preset to the weapon when we call `WeaponMesh->SetCollisionProfileName(FName("Weapon"));`. When colliding with a PhysicsBody the function `OnHit()` will be called, while when overlapping with Pawn the function `OnBeginOverlap()` is called.
+
+For the weapon, this is most of what you need. You can already create a weapon and have the weapon deal damage.
 
 ## ***Taking Damage***
 
