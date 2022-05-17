@@ -159,6 +159,63 @@ For the weapon, code-wise, this is most of what you need. You can already create
 
 ## ***Taking Damage***
 
-I override the function `TakeDamage()` of my character to receive the damage.
+Now, to the objects we want to take damage (e.g. the main character, destructible environment, etc.), we need to override the function `TakeDamage()` and deal with the received damage. Here follows a snippet of how I implement this in my main characters.
 
-**(WIP)**
+```cpp
+// HEADER file
+
+class ALeMainCharacter : public ACharacter, public IInteractor
+{
+	GENERATED_BODY()
+
+//... more code ...
+
+public:
+	UPROPERTY(Category = "Character/Health", EditAnywhere, BlueprintReadWrite,
+		meta = (ClampMin = "0", UIMin = "0"))
+	float Health;
+
+	virtual float TakeDamage(float DamageAmount, const struct FDamageEvent& DamageEvent,
+	                         class AController* EventInstigator, class AActor* DamageCauser) override;
+//... more code ...
+}
+```
+
+For the header, we simply override the `TakeDamage()` function and, in this case, I implemented a Health variable.
+
+```cpp
+// SOURCE file
+
+float ALeMainCharacter::TakeDamage(float DamageAmount, const struct FDamageEvent& DamageEvent,
+                                           AController* EventInstigator, AActor* DamageCauser)
+{
+	float damage = Super::TakeDamage(DamageAmount, DamageEvent, EventInstigator, DamageCauser);
+
+    // If you want to deal with specific damage events, you can do it like this.
+	if (DamageEvent.IsOfType(FPointDamageEvent::ClassID))
+	{
+		FPointDamageEvent* const PointDamageEvent = (FPointDamageEvent*) &DamageEvent;
+		// In this example, the PointDamageEvent models damage applied at a specific point on the victim.
+        FVector DamageLocation = PointDamageEvent->HitInfo.Location;
+        // ... more code ...
+	}
+
+	Health -= damage;
+  
+	if (Health <= 0)
+	{
+        // I implemented a function to deal with death of the character.
+		Die();
+	}
+
+	return damage;
+}
+```
+
+In the function, we reduce the health by the amount of damage taken, and if the Health is 0 the character dies. Note that if you want to deal with specific damage events, we can deal with them here (e.g. a wooden crate takes fire damage and becomes ablaze).
+
+## Conclusion
+
+With this tutorial, we learned how to implement a simple combat mechanic based on two engine mechanisms: the Collision Detection and the Damage System. In summary, we create a weapon that holds a static mesh, when a collision between the mesh and other objects is detected, the weapon deals damage to the other object. Finally, implement the behavior to deal with the damage received on relevant objects and the loop is complete!
+
+I hope this tutorial helps you and feel free to leave a comment with questions and suggestions.
