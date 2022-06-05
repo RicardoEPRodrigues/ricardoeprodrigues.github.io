@@ -190,7 +190,7 @@ Save and this will be enough for our weapon. For now, we just need to place it o
 
 In our current stage, we will have a weapon in the level and a character that we can control. Regarding the character, I will assume we have a Blueprint instance of the C++ character where we did our changes. With this in mind, let's open our character Blueprint. In the Event Graph, we will implement an event that when a key is pressed (we'll use `E`), we select the nearest weapon and equip it. It should look something like this:
 
-<iframe src="https://blueprintue.com/render/ystejp1q/" scrolling="no" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://blueprintue.com/render/ystejp1q/" scrolling="no" allowfullscreen></iframe>
 
 The implementation is quite straightforward. We scan for the nearest actor of the Weapon class (ignoring our equipped weapon if there is one), if we find one we cast it to Weapon, and then we call the `EquipWeapon()` function we defined in C++. We should now be able to pick up the weapon. Let's see what it looks like:
 
@@ -200,7 +200,7 @@ The implementation is quite straightforward. We scan for the nearest actor of th
 
 To drop the weapon, we'll use an event that when a key is pressed (we'll use `R`), we drop our weapon. It should look something like this:
 
-<iframe src="https://blueprintue.com/render/o5vtx4sf/" scrolling="no" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://blueprintue.com/render/o5vtx4sf/" scrolling="no" allowfullscreen></iframe>
 
 Because most of our behavior is done in C++, we just need to call it. Let's see what it looks like by picking up a weapon and dropping it:
 
