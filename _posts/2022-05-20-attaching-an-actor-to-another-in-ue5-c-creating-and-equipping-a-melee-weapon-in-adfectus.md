@@ -14,7 +14,7 @@ tag:
   - c++
 author: ricardorodrigues
 ---
-Right_Weapon_SocketThis tutorial focuses on creating a weapon that a character can equip in UE5. This is a follow-up to the [Collisions and Damage in UE5 Tutorial](<{{ site.url }}/combat-in-adfectus-collisions-in-ue5/>). In this tutorial, we will focus on how you can equip a weapon to a character.
+This tutorial focuses on creating a weapon that a character can equip in UE5. This is a follow-up to the [Collisions and Damage in UE5 Tutorial](<{{ site.url }}/combat-in-adfectus-collisions-in-ue5/>). In this tutorial, we will focus on how you can equip a weapon to a character.
 
 We'll start by implementing the essential bits in C++, then we move to Blueprints. The behavior in C++ can be defined in a few steps: **(1)** Create the weapon, **(2)** Attach the weapon to the character, and **(3)** Set the character as the wielder of the weapon. The behavior in the Blueprints will only facilitate the creation and equipping of a weapon.
 
