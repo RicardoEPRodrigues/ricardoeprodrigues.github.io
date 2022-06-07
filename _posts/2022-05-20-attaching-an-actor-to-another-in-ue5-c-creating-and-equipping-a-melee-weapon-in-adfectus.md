@@ -1,8 +1,8 @@
 ---
 layout: post
 category: blog
-title: Attaching an Actor to Another in UE5 C++ | Creating and Equipping a Melee
-  Weapon in Adfectus
+title: Attaching Actors to each other in UE5 C++ | Creating and Equipping a
+  Melee Weapon in Adfectus
 date: 2022-05-20T21:56:59.524Z
 description: This tutorial focuses on the creation of a weapon (an Actor in UE5)
   that can be equipped by a character.
@@ -12,6 +12,7 @@ tag:
   - game
   - ue5
   - c++
+  - blueprint
 author: ricardorodrigues
 ---
 This tutorial focuses on creating a weapon that a character can equip in UE5. This is a follow-up to the [Collisions and Damage in UE5 Tutorial](<{{ site.url }}/combat-in-adfectus-collisions-in-ue5/>). In this tutorial, we will focus on how you can equip a weapon to a character.
@@ -28,17 +29,17 @@ For the weapon itself, we just need to keep the reference to its owner and disab
 UCLASS()
 class CPPTHIRDPERSON_API AWeapon : public AActor
 {
-	GENERATED_BODY()
+    GENERATED_BODY()
     
     // Weak Pointer to the wielder.
-	UPROPERTY()
-	TWeakObjectPtr<class AActor> WielderPtr;
+    UPROPERTY()
+    TWeakObjectPtr<class AActor> WielderPtr;
     
 public:
     
     // Function to set the wielder.
-	UFUNCTION(Category = Weapon)
-	void SetWielder(class AActor* Actor);
+    UFUNCTION(Category = Weapon)
+    void SetWielder(class AActor* Actor);
     
     //...
 }
@@ -49,15 +50,15 @@ In the header, we just need to add the reference and a new function. Recall that
 ```cpp
 void AWeapon::SetWielder(AActor* Actor)
 {
-	if (AActor* Wielder = WielderPtr.Get())
-	{
-		WeaponMesh->MoveIgnoreActors.Remove(Wielder);
-	}
-	WielderPtr = Actor;
-	if (Actor)
-	{
-		WeaponMesh->MoveIgnoreActors.Add(Actor);
-	}
+    if (AActor* Wielder = WielderPtr.Get())
+    {
+        WeaponMesh->MoveIgnoreActors.Remove(Wielder);
+    }
+    WielderPtr = Actor;
+    if (Actor)
+    {
+        WeaponMesh->MoveIgnoreActors.Add(Actor);
+    }
 }
 ```
 
@@ -72,24 +73,24 @@ Let's look at our character.
 UCLASS(config = Game)
 class AMyCharacter : public ACharacter, public IInteractor
 {
-	GENERATED_BODY()
+    GENERATED_BODY()
     //...
     
 public:
     // Called when this character is being destroyed.
     // If we have a weapon, we want to destroy it.
     BeginDestroy();
-    
-	UPROPERTY(Category = Weapon, VisibleAnywhere, BlueprintReadOnly, meta = (AllowPrivateAccess = "true"))
-	class AWeapon* EquippedWeapon;
-    
-	/** Equips given weapon on the character. */
-	UFUNCTION(BlueprintCallable, Category = Weapon)
-	virtual void EquipWeapon(class AWeapon* Weapon);
 
-	/** Drops Equipped Weapon if it exists. If destroy parameter is true, the weapon is destroyed instead of being dropped. */
-	UFUNCTION(BlueprintCallable, Category = Weapon)
-	virtual void DropWeapon(bool bDestroy = false);
+    UPROPERTY(Category = Weapon, VisibleAnywhere, BlueprintReadOnly, meta = (AllowPrivateAccess = "true"))
+    class AWeapon* EquippedWeapon;
+
+    /** Equips given weapon on the character. */
+    UFUNCTION(BlueprintCallable, Category = Weapon)
+    virtual void EquipWeapon(class AWeapon* Weapon);
+
+    /** Drops Equipped Weapon if it exists. If destroy parameter is true, the weapon is destroyed instead of being dropped. */
+    UFUNCTION(BlueprintCallable, Category = Weapon)
+    virtual void DropWeapon(bool bDestroy = false);
 }
 ```
 
@@ -100,57 +101,57 @@ In the header of our character, we need a pointer to our weapon and some new fun
 
 void AMyCharacter::BeginDestroy()
 {
-	DropWeapon(true);
+    DropWeapon(true);
     //...
 }
 
 void AMyCharacter::EquipWeapon(AWeapon* Weapon)
 {
-	if (Weapon != nullptr)
-	{
-		/* Drop Equipped Weapon */
-		DropWeapon();
+    if (Weapon != nullptr)
+    {
+        /* Drop Equipped Weapon */
+        DropWeapon();
         /* OR */
-		/* Destroy Equipped Weapon. */
-		DropWeapon(true);
-        
+        /* Destroy Equipped Weapon. */
+        DropWeapon(true);
+
         /* Use this weapon and attach it */
-		EquippedWeapon = Weapon;
+        EquippedWeapon = Weapon;
         /* OR */
-		/* Create a copy of the weapon and attaching it. */
-		FActorSpawnParameters parameters;
-		parameters.Template = Weapon;
-		EquippedWeapon = GetWorld()->SpawnActor<AWeapon>(Weapon->GetClass(), parameters);
-      
+        /* Create a copy of the weapon and attaching it. */
+        FActorSpawnParameters parameters;
+        parameters.Template = Weapon;
+        EquippedWeapon = GetWorld()->SpawnActor<AWeapon>(Weapon->GetClass(), parameters);
+
         // Set the wielder, ignore collisions, and add it to the correct socket.
         EquippedWeapon->SetWielder(this);
         MoveIgnoreActorAdd(EquippedWeapon);
         EquippedWeapon->AttachToComponent(GetMesh(),
                                           FAttachmentTransformRules::SnapToTargetNotIncludingScale,
                                           TEXT(RIGHT_WEAPON_SOCKET));
-	}
-	else
-	{
-		UE_LOG(LogAdfectus, Warning, TEXT("Weapon is null."))
-	}
+    }
+    else
+    {
+        UE_LOG(LogAdfectus, Warning, TEXT("Weapon is null."))
+    }
 }
 
 void AMyCharacter::DropWeapon(bool bDestroy)
 {
-	if (EquippedWeapon != nullptr)
-	{
+    if (EquippedWeapon != nullptr)
+    {
         // Remove from the socket, making it seperate from the character.
-		EquippedWeapon->DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
+        EquippedWeapon->DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
         // Re-enable collisions.
-		MoveIgnoreActorRemove(EquippedWeapon);
-      
-		if (bDestroy)
-		{
-			EquippedWeapon->Destroy();
-		}
-      
-		EquippedWeapon = nullptr;
-	}
+        MoveIgnoreActorRemove(EquippedWeapon);
+
+        if (bDestroy)
+        {
+            EquippedWeapon->Destroy();
+        }
+
+        EquippedWeapon = nullptr;
+    }
 }
 ```
 
