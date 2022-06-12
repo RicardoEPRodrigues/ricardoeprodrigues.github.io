@@ -1,8 +1,7 @@
 ---
 layout: post
 category: blog
-title: Attaching Actors to each other in UE5 C++ | Creating and Equipping a
-  Melee Weapon in Adfectus
+title: Attaching Actors to each other in UE5 C++ | Equipping a Weapon in Adfectus
 date: 2022-05-20T21:56:59.524Z
 description: This tutorial focuses on the creation of a weapon (an Actor in UE5)
   that can be equipped by a character.
