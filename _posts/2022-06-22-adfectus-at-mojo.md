@@ -18,7 +18,7 @@ If you want to try out the game you can play it now here:
 
 <iframe src="https://itch.io/embed/654603?bg_color=eee&amp;fg_color=222222&amp;link_color=327345&amp;border_color=333835" width="552" height="167" frameborder="0"><a href="https://quenestil.itch.io/adfectus">Adfectus by Quenestil</a></iframe>
 
-Additionally, if you are interested in the game and would like to participate in future experiments on it, I invite you to fill out this form:
+Additionally, if you are interested in the game and **would like to participate in future experiments** on it, I invite you to fill out this form:
 
 <https://forms.gle/uALkPYyBV3Q99KE48>
 
