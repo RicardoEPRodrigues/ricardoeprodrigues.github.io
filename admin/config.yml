@@ -2,7 +2,7 @@ backend:
   name: github
   repo: RicardoEPRodrigues/ricardoeprodrigues.github.io
   branch: gh-pages
-  site_domain: ricardoeprodrigues.github.io
+  site_domain: colorcrow.me
 
 publish_mode: editorial_workflow
 
