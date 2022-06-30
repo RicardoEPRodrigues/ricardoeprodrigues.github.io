@@ -24,13 +24,13 @@ resume: true
 resume-external: false
 resume-url: assets/uploads/CV-Ricardo-Rodrigues.pdf
 
-url: https://ricardoeprodrigues.github.io
+url: https://colorcrow.me
 # your url: https://USERNAME.github.io
 
 permalink: /:title/
 
 # To enable google analytics, supply your token below
-# analytics-google: 'UA-MYANALYTICS'
+analytics-google: 'G-5ZB1CTDL14'
 
 # if you don't want comments in your posts, leave categories empty
 disqus:
@@ -44,7 +44,7 @@ orcid: 0000-0003-0158-1460
 github: RicardoEPRodrigues
 itchio: quenestil
 twitch: ricardoeprodrigues
-email: ricardo.proenca.rodrigues@tecnico.ulisboa.pt
+email: ricardo@colorcrow.me
 
 authors:
   ricardorodrigues:
