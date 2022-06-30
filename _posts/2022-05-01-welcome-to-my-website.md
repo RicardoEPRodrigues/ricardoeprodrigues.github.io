@@ -1,10 +1,11 @@
 ---
-title: Welcome to my website
 layout: post
-date: 2022-05-01 20:00
-headerImage: false
-description: A welcoming message from me to you.
 category: blog
+title: Welcome to my website
+date: 2022-05-01 20:00
+description: A welcoming message from me to you.
+headerImage: false
+image: /assets/uploads/CorvoTattoo_background.png
 author: ricardorodrigues
 externalLink: false
 ---
