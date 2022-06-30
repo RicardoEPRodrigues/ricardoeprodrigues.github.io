@@ -15,7 +15,7 @@ tag:
   - mojo
 author: ricardorodrigues
 ---
-This week I was lucky to be at [MOJO'22](https://labjogos.tecnico.ulisboa.pt/mojo/2022/), the game showcasing event at [Técnico Lisboa](https://tecnico.ulisboa.pt/). My presence was marked in two different ways, first off I am a teaching assistant in the course of [Game Development Methodology](https://fenix.tecnico.ulisboa.pt/disciplinas/TJS/2021-2022/2-semestre), secondly I am a Game Developer showcasing Adfectus.
+This week I was lucky to be at [MOJO'22](https://labjogos.tecnico.ulisboa.pt/mojo/2022/), the game showcasing event at [Técnico Lisboa](https://tecnico.ulisboa.pt/). My presence was marked in two different ways, first off I am a teaching assistant in the course of [Game Development Methodology](https://fenix.tecnico.ulisboa.pt/disciplinas/TJS/2021-2022/2-semestre), secondly I am a Game Developer showcasing [Adfectus](<{{ site.url }}/projects/2021-07-27-adfectus/>).
 
 Experience, found issues (lack of my presence, bugs, wrong weapons' damage), physical assets (poster, controls), pictures, suggestion box and feedback, and overall summary.
 
