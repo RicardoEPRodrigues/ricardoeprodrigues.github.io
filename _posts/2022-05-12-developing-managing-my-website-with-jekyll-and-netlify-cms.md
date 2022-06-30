@@ -4,6 +4,7 @@ category: blog
 title: Developing my Website with Jekyll and Netlify CMS
 date: 2022-05-12T21:55:51.917Z
 description: How I made the website you are on by using a Jekyll template and Netlify CMS.
+image: /assets/uploads/CorvoTattoo_background.png
 tag:
   - webdev
   - tutorial
