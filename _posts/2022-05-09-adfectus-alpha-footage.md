@@ -5,6 +5,7 @@ title: Adfectus Alpha Footage
 date: 2022-05-09T23:30:43.813Z
 description: Link to a gameplay video of Adfectus Alpha
 headerImage: false
+image: /assets/uploads/highresscreenshot00007.png
 tag:
   - gamedev
   - game
