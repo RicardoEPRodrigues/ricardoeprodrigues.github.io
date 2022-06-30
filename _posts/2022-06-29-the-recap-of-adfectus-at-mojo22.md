@@ -5,7 +5,7 @@ title: The Recap of Adfectus at MOJO'22
 date: 2022-06-29T13:08:49.247Z
 description: This post delves into the presence of Adfectus in the game
   showcasing event, MOJO'22.
-headerImage: true
+headerImage: false
 image: /assets/uploads/20220627_181121.jpg
 tag:
   - gamedev
