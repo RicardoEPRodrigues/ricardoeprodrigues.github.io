@@ -21,6 +21,6 @@ As for the presentation, it is supposed to showcase the core of the work done in
     src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFFLqw-LfQ&#x2F;view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
   </iframe>
 </div>
-<a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFFLqw-LfQ&#x2F;view?utm_content=DAFFLqw-LfQ&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">PhD CAT 20min Presentation</a> by Ricardo Rodrigues
+<a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFFLqw-LfQ&#x2F;view?utm_content=DAFFLqw-LfQ&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">
 
 WIP
