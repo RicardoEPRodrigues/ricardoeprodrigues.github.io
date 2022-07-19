@@ -11,6 +11,8 @@ tag:
   - game
   - ue5
 author: ricardorodrigues
+hidden: true
+published: false
 ---
 Adfectus will be at [MOJO](https://labjogos.tecnico.ulisboa.pt/mojo/2022/), the students' games showcase at [Técnico Lisboa](https://tecnico.ulisboa.pt/). It will be held on the 27th in Técnico and, for the first time, the public will have the opportunity to try out the game. Fortunately, this is also an opportunity for me to make a demo available for everyone!
 
