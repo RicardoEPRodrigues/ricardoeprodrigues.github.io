@@ -11,15 +11,15 @@ pagination:
 		<p class="text-center">Nothing published yet!</p>
 	{% elsif site.pagination.enabled %}
 		{% for post in paginator.posts %}
-			{% if post.hidden != true or post.output != true %}
+			{% if post.hidden != true %}
 				{% include blog-post.html %}
 			{% endif %}
 		{% endfor %}
 
 		{% include pagination.html%}
 	{% else %}
-		{% for post in site.posts %}
-			{% if post.hidden != true or post.output != true %}
+		{% for post in site.posts %}	
+			{% if post.hidden != true %}
 				{% include blog-post.html %}
 			{% endif %}
 		{% endfor %}
