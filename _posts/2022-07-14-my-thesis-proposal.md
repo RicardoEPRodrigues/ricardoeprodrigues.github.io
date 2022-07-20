@@ -9,8 +9,14 @@ image: /assets/uploads/CorvoTattoo_background.png
 tag:
   - phd
 author: ricardorodrigues
+hidden: false
+published: true
 ---
 This past Friday, 14th of July 2022, I presented my Thesis Proposal. This step in my Ph.D. is long in the making and marks more than half of the process of a Ph.D. I had to prepare a document and a presentation. The former holds a lot of info but also serves as a base for my final thesis. It covers a diverse set of topics, like emotions, believability, and anticipation.
+
+You can find the Thesis Proposal document here:
+
+<object data="{{ site.url }}/assets/uploads/CAT_Enriching_Simple_Actions_with_Impactful_Emotions.pdf" width="800" height="500"></object>
 
 As for the presentation, it is supposed to showcase the core of the work done in 20 minutes, not an easy task. I focused on topics I still haven't completely figured out, although a lot of my work is on track to a good solution. If you'd like to see the slides, you can do so here:
 
