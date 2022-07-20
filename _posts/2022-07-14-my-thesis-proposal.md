@@ -29,4 +29,6 @@ As for the presentation, it is supposed to showcase the core of the work done in
 </div>
 <a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFFLqw-LfQ&#x2F;view?utm_content=DAFFLqw-LfQ&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">
 
-WIP
+The presentation went well and I was lucky to receive a lot of great feedback. Interesting input to better my message was that of linking back to the problem and hypothesis when introducing and closing a section, chapter, or whenever necessary. This feedback while appearing obvious is something easy to forget when you are writing long documents. Furthermore, another noteworthy suggestion was to include a personal reflection in the summary of a chapter, thus adding a view on why that chapter mattered and what are the big messages it should pass on.
+
+In closing, a lot of work went into the production of this document and presentation, yet a lot more is still to come for my Ph.D. Thesis. Wish me luck!
