@@ -11,4 +11,6 @@ externalLink: https://docs.google.com/forms/d/e/1FAIpQLSfGCKqssLfdEnurqb1CLVPH3m
 hidden: true
 published: true
 ---
-asdf
+Please, fill out the form in the following link to follow our updates:
+
+https://docs.google.com/forms/d/e/1FAIpQLSfGCKqssLfdEnurqb1CLVPH3mKvOfLt__sIKeSNvDa_M67IZg/viewform?usp=sf_link
