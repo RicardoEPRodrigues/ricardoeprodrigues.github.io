@@ -41,7 +41,7 @@ collections:
       - {label: "External Link", name: "externalLink", widget: "string", required: false}
       - {label: "Hidden", name: "hidden", widget: "boolean", default: false, hint: "Setting hidden to true will exclude a post from pagination, but it will still be available by direct link."}
       - {label: "Published", name: "published", widget: "boolean", default: true, hint: "Setting published to false will not only hide the post but also make it unavailable (i.e. it is exclude from the site)."}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Body", name: "body", widget: "markdown", required: false}
   - name: "projects" # Used in routes, e.g., /admin/collections/blog
     label: "Projects" # Used in the UI
     folder: "_projects" # The path to the folder where the documents are stored
@@ -62,4 +62,4 @@ collections:
       - {label: "External Link", name: "externalLink", widget: "string", required: false}
       - {label: "Hidden", name: "hidden", widget: "boolean", default: false, hint: "Setting hidden to true will exclude a post from pagination, but it will still be available by direct link."}
       - {label: "Published", name: "published", widget: "boolean", default: true, hint: "Setting published to false will not only hide the post but also make it unavailable (i.e. it is exclude from the site)."}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Body", name: "body", widget: "markdown", required: false}
