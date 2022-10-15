@@ -59,6 +59,9 @@ layout: compress
     {{ scss_sheet | scssify }}
     </style>
 
+    {% if page.externalLink %}
+        <meta http-equiv="refresh" content="0; URL='{{ page.externalLink }}'"/>
+    {% endif %}
 </head>
 <body>
     <div class="wrapper-{% if site.width == "normal" %}normal{% elsif site.width == "large" %}large{% endif %}">
