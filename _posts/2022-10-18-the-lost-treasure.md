@@ -2,7 +2,7 @@
 layout: post
 category: blog
 title: The Lost Treasure
-date: 2022-10-18T20:53:13.734Z
+date: 2022-10-19T23:00:00.000Z
 description: An exploration on how to creating sensations in a 3D environment.
 headerImage: true
 image: /assets/uploads/losttreasure11.png
