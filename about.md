@@ -7,7 +7,7 @@ layout: page
 My name is Ricardo Rodrigues and I am passionate about games, playing them, and building them.
 I'm a *Game Developer*, a *Ph.D. student* at [Técnico,](https://tecnico.ulisboa.pt/) and an AI and Games Researcher at [GAIPS](https://gaips.inesc-id.pt/) and [INESC-ID](https://www.inesc-id.pt/).
 
-My work currently focuses on the development of games and emotional artificial intelligence (the modeling of emotions and their expression). I have a special interest in C++ and the Unreal Engine. I also enjoy studying computer graphic technics and engines making use of graphic APIs, like *OpenGL*.
+My work currently focuses on the development of games and emotional artificial intelligence (the modeling of emotions and their expression). I have a special interest in C++ and Unreal Engine. I also enjoy studying computer graphic technics and engines making use of graphic APIs, like *OpenGL*.
 
 ## Skills
 
@@ -25,17 +25,17 @@ My work currently focuses on the development of games and emotional artificial i
 * Coordinator and Member of [Game Dev Técnico](https://gamedev.tecnico.ulisboa.pt/).
 * Coordinator and Member of [LabJogos Técnico](https://labjogos.tecnico.ulisboa.pt/).
 * Teaching Assistant at [Técnico](https://tecnico.ulisboa.pt/).
-* Coordinator and Web Developer at \[Sopa para Todos]({{ site.url }}/projects/2022-05-05-sopa-para-todos/).
+* Coordinator and Web Developer at [Sopa para Todos]({{site.url}}/projects/2022-05-05-sopa-para-todos/).
 * Web Developer at [t_insight](https://www.tinsight.pt/).
 * Game Developer on Research Projects - [Virtual Tutoring](https://sites.uab.pt/tutoria-virtual/) and [Festarola](https://www.researchgate.net/publication/336561569_Festarola_a_Game_for_Improving_Problem_Solving_Strategies).
 
 ## Projects
 
-* \[Adfectus]({{ site.url }}/projects/2021-07-27-adfectus/) - an arena game for 2 players to battle one another.
+* [Adfectus]({{site.url}}/projects/2021-07-27-adfectus/) - an arena game for 2 players to battle one another.
 * [3Engine](https://ricardoeprodrigues.github.io/3Engine/) - a game engine running using C++, OpenGL, and JSON.
 * [Smashcart Ultra](https://smashcart-ultra.itch.io/smashcart-ultra) - a low-poly shopping-cart simulator game where you control a crazy cart.
 
-See the \[Projects Page]({{ site.url }}/projects/) or visit my [itch.io profile](https://quenestil.itch.io/) for more of my digital creations.
+See the [Projects Page]({{site.url}}/projects/) or visit my [itch.io profile](https://quenestil.itch.io/) for more of my digital creations.
 
 ## Why Color Crow?
 
