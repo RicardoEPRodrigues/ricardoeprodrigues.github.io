@@ -8,7 +8,6 @@ headerImage: true
 image: /assets/uploads/what-a-week.jpeg
 tag:
   - gamedev
-  - ""
 author: ricardorodrigues
 hidden: false
 published: true
@@ -21,7 +20,7 @@ It has been a minute, uhm? Well, a lot is happening and I just wanted to keep yo
 
 I do not know when I will return to blogging more often, but I hope soon. It will all depends on the amount of work and time I have to finish my Ph.D.
 
-The final stretch!
+*The final stretch!*
 
 This is it for now, but I can leave you with something more substantial. I have published a newer version of **Adfectus** on itch.io. It adds tons of good stuff since my last update, including emoji-like facial expressions, a color outline for emotion expressions, overhead background to signal emotional changes, a new rage emotion expression, and the obligatory bug fixes.
 
