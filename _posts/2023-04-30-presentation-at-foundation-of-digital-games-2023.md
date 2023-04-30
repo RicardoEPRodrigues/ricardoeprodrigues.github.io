@@ -5,6 +5,7 @@ title: Presentation at Foundation of Digital Games 2023
 date: 2023-04-30T15:16:35.941Z
 description: I presented my Ph.D. work on FDG2023. In it I discuss part of the
   development on Adfectus.
+headerImage: true
 image: /assets/uploads/screenshot-from-2023-04-30-16-15-51.png
 tag:
   - adfectus
