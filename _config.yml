@@ -22,7 +22,7 @@ background-dark: "linear-gradient(315deg, black 0%, black 60%, #143300 100%)"
 # and specify source (external or local).
 resume: true
 resume-external: false
-resume-url: assets/uploads/CV-Ricardo-Rodrigues.pdf
+resume-url: assets/uploads/cv-ricardo-rodrigues.pdf
 
 url: https://colorcrow.me
 # your url: https://USERNAME.github.io
