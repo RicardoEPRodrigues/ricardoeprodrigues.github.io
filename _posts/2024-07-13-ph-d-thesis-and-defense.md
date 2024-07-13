@@ -34,8 +34,8 @@ All of this is to say that I really enjoyed the work I developed, but it was not
 
 To close this blog post out (the same way I closed my thesis, fitting...), here is a humbling excerpt from one of my favorite books, The Hobbit by J.R.R. Tolkien:
 
-> “Then the prophecies of the old songs have turned out to be true, after a fashion!” said Bilbo.\
+> “Then the prophecies of the old songs have turned out to be true, after a fashion!” said Bilbo.
 >
-> “Of course!” said Gandalf. “And why should not they prove true? Surely you don’t disbelieve the prophecies, because you had a hand in bringing them about yourself? You don’t really suppose, do you, that all your adventures and escapes were managed by mere luck, just for your sole benefit? You are a very fine person, Mr. Baggins, and I am very fond of you; but **you are only quite a little fellow in a wide world after all!**”\
+> “Of course!” said Gandalf. “And why should not they prove true? Surely you don’t disbelieve the prophecies, because you had a hand in bringing them about yourself? You don’t really suppose, do you, that all your adventures and escapes were managed by mere luck, just for your sole benefit? You are a very fine person, Mr. Baggins, and I am very fond of you; but **you are only quite a little fellow in a wide world after all!**”
 >
 > “**Thank goodness!**” said Bilbo laughing, and handed him the tabacco-jar.
