@@ -40,6 +40,8 @@ Although developed for a class, I kept developing the software to help me learn 
     <a class="button" href="https://ricardoeprodrigues.github.io/3Engine/" target="_blank" rel="noopener noreferrer">Explore 3Engine</a>
 </div>
 
+{% include button.html button_url='https://ricardoeprodrigues.github.io/3Engine/' button_title='Explore 3Engine' %}
+
 ## Smashcart Ultra
 
 ![Smashcart Ultra Screenshot](https://img.itch.zone/aW1nLzUwMTYyNjQucG5n/original/SLzQ54.png "Smashcart Ultra")
