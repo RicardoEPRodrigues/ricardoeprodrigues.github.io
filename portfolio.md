@@ -18,6 +18,12 @@ One of my most fun components to develop was the context awareness modules, wher
 
 ![Screenshot of prototype 4 where a character interacts with the player.](/assets/uploads/today-snapshot03.jpg "A Youmio character interacting with the player in Prototype 4")
 
+
+{% include two-column.html 
+    column1='![Screenshot of prototype 3 where a character interacts with the player.](/assets/uploads/today-snapshot02.jpg "A Youmio character interacting with the player.")' 
+    column2='![Screenshot of prototype 4 where a character interacts with the player.](/assets/uploads/today-snapshot03.jpg "A Youmio character interacting with the player in Prototype 4")' 
+%}
+
 ## Adfectus
 
 ![Adfectus Screenshot](https://img.itch.zone/aW1nLzM1MTU4MTEucG5n/original/WY5hbl.png "Adfectus")
