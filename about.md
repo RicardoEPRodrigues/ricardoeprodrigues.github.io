@@ -18,13 +18,6 @@ With **over 8 years** of experience in **Affective Computing** and **Game Devel
 * Founding Member of [Game Dev Técnico](https://gamedev.tecnico.ulisboa.pt/)
 * Coordinator of [LabJogos Técnico](https://labjogos.tecnico.ulisboa.pt/)
 
-## Games and Projects
-
-* [Adfectus]({{site.url}}/projects/2021-07-27-adfectus/) - an arena game for 2 players to battle one another.
-* [3Engine](https://ricardoeprodrigues.github.io/3Engine/) - a game engine running using C++, OpenGL, and JSON.
-
-See the [Projects Page]({{site.url}}/projects/) or visit my [itch.io profile](https://quenestil.itch.io/) for more of my digital creations.
-
 ## Why Colorcrow?
 
 My nickname comes from a tattoo I have on my arm, which portrays **colorful crow on top of some books** by the artist Taylor Catclaw ([@taylorcatclaw](https://www.instagram.com/taylorcatclaw/)).
