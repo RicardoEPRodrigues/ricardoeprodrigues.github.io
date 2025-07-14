@@ -4,6 +4,20 @@ layout: page
 ---
 I am **Ricardo Rodrigues**, a game developer and AI Engineer. I am passionate about games, playing them, and building them. Here are some of my works.
 
+## Youmio
+
+![Screenshot of Youmio](/assets/uploads/today-snapshot01.jpg "Youmio")
+
+**[Youmio](https://youmio.ai/)** is a platform offering novel ways to create 3D agents and immersive worlds. Originally named **Today**, it was a game mixing farming and gathering with intelligent virtual agents that would communicate their needs in free-form speech.
+
+I was one of the AI engineers responsible for the development of the infrastructure allowing the agents to communicate with the player, either by text or with speech. Making use of Speech-to-Text and Text-to-Speech technologies for the front-end side, but also developing all of the server-side architecture to support LLMs and their prompting.
+
+One of my most fun components to develop was the context awareness modules, where objects in the world would inform the agent of their presence and thus the LLM, allowing for the agent to be more aware of its sorroundings.
+
+![Screenshot of prototype 3 where a character interacts with the player.](/assets/uploads/today-snapshot02.jpg "A Youmio character interacting with the player.")
+
+![Screenshot of prototype 4 where a character interacts with the player.](/assets/uploads/today-snapshot03.jpg "A Youmio character interacting with the player in Prototype 4")
+
 ## Adfectus
 
 ![Adfectus Screenshot](https://img.itch.zone/aW1nLzM1MTU4MTEucG5n/original/WY5hbl.png "Adfectus")
