@@ -12,7 +12,7 @@ I am **Ricardo Rodrigues**, a game developer and AI Engineer. I am passionate ab
 
 I was one of the AI engineers responsible for the development of the infrastructure allowing the agents to communicate with the player, either by text or with speech. Making use of Speech-to-Text and Text-to-Speech technologies for the front-end side, but also developing all of the server-side architecture to support LLMs and their prompting.
 
-One of my most fun components to develop was the context awareness modules, where objects in the world would inform the agent of their presence and thus the LLM, allowing for the agent to be more aware of its sorroundings.
+One of my most fun components to develop was the context awareness modules, where objects in the world would inform the agent of their presence and thus the LLM, allowing for the agent to be more aware of its surroundings.
 
 ![Screenshot of prototype 3 where a character interacts with the player.](/assets/uploads/today-snapshot02.jpg "A Youmio character interacting with the player.")
 
