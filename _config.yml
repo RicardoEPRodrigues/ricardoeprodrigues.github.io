@@ -77,7 +77,10 @@ feed:
     - projects
 
 # if you don't need projects, comment the *projects* configs below
-show_projects: true
+# show_projects: true
+
+# if you don't need "portfolio" page, comment them out below
+# portfolio: true
 
 # if you don't need "about" or "blog", comment them out below
 about: true
