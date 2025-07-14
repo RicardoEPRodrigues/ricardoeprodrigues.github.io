@@ -14,23 +14,20 @@ I was one of the AI engineers responsible for the development of the infrastruct
 
 One of my most fun components to develop was the context awareness modules, where objects in the world would inform the agent of their presence and thus the LLM, allowing for the agent to be more aware of its surroundings.
 
-![Screenshot of prototype 3 where a character interacts with the player.](/assets/uploads/today-snapshot02.jpg "A Youmio character interacting with the player.")
-
-![Screenshot of prototype 4 where a character interacts with the player.](/assets/uploads/today-snapshot03.jpg "A Youmio character interacting with the player in Prototype 4")
-
-
 {% include two-column.html 
     column1='![Screenshot of prototype 3 where a character interacts with the player.](/assets/uploads/today-snapshot02.jpg "A Youmio character interacting with the player.")' 
     column2='![Screenshot of prototype 4 where a character interacts with the player.](/assets/uploads/today-snapshot03.jpg "A Youmio character interacting with the player in Prototype 4")' 
 %}
 
+{% include button.html button_url='https://youmio.ai/' button_title='Visit Youmio' %}
+
 ## Adfectus
 
 ![Adfectus Screenshot](https://img.itch.zone/aW1nLzM1MTU4MTEucG5n/original/WY5hbl.png "Adfectus")
 
-Adfectus is an arena game for 2 players to battle one another. Each player has a claque that supports them and helps them throughout the game.
+Adfectus is an arena game for 2 players to battle one another. Each player has a claque that supports them and helps them throughout the game. To win the game a player has to better than its opponents, but also please its crowd, that will only be satisfied with a good show.
 
-To win the game a player has to better than its opponents, but also please its crowd, that will only be satisfied with a good show.
+This game was developed in the context of my Ph.D. thesis and most of the development was done by me, with some help from master's students. One particularity of the game is the emotion system the characters use allowing them to feel emotions depending on how they perceive the battle to be going. Not reacting only to current stimuli, but also predicting how the battle will go based on previously collected data.
 
 <iframe src="https://itch.io/embed/654603?bg_color=eee&amp;fg_color=222222&amp;link_color=327345&amp;border_color=333835" width="552" height="167" frameborder="0"><a href="https://quenestil.itch.io/adfectus">Adfectus by Quenestil</a></iframe>
 
@@ -42,10 +39,6 @@ Game Engine [3Engine](https://ricardoeprodrigues.github.io/3Engine/) using OpenG
 
 Although developed for a class, I kept developing the software to help me learn how OpenGL works. It also helped me improve my C++ code, although a lot of my code is experimental.
 
-<div class="buttons-container">
-    <a class="button" href="https://ricardoeprodrigues.github.io/3Engine/" target="_blank" rel="noopener noreferrer">Explore 3Engine</a>
-</div>
-
 {% include button.html button_url='https://ricardoeprodrigues.github.io/3Engine/' button_title='Explore 3Engine' %}
 
 ## Smashcart Ultra
@@ -56,9 +49,7 @@ Although developed for a class, I kept developing the software to help me learn 
 
 This project is being developed in the student club [Game Dev Técnico](https://gamedev.tecnico.ulisboa.pt/), where I was one of the founding members, coordinator, and producer of this game. While I did not program much in this project, I was responsible for managing the team and guiding the development. I have since left my role, but the development continues!
 
-<div class="buttons-container">
-    <a class="button" href="https://smashcart-ultra.itch.io/smashcart-ultra/" target="_blank" rel="noopener noreferrer">Play Smashcart Ultra</a>
-</div>
+{% include button.html button_url='https://smashcart-ultra.itch.io/smashcart-ultra/' button_title='Play Smashcart Ultra' %}
 
 ## Labjogos Website
 
@@ -70,6 +61,4 @@ This project is being developed in the student club [Game Dev Técnico](https://
 
 I programmed part of the website and helped guide its development. Both this website and LabJogos' have a dark theme, making it a very interesting experience depending on your OS's theme.
 
-<div class="buttons-container">
-    <a class="button" href="https://labjogos.tecnico.ulisboa.pt/" target="_blank" rel="noopener noreferrer">Visit LabJogos</a>
-</div>
+{% include button.html button_url='https://labjogos.tecnico.ulisboa.pt/' button_title='Visit LabJogos' %}
