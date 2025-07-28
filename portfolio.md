@@ -4,6 +4,14 @@ layout: page
 ---
 I am **Ricardo Rodrigues**, a game developer and AI Engineer. I am passionate about games, playing them, and building them. Here are some of my works.
 
+## Codfish Academy
+
+Codfish Academy is "a hub for aspiring game developers looking to master Unreal Engine in a modern, high-tech environment." It is also a consulting company for game development companies in need of Unreal Engine knowledge and people.
+
+I was brought in as a Senior Unreal Engineer to work with Didimo, a client looking to develop/improve their Popul8 plugin for Unreal Engine. [Popul8](https://www.didimo.co/popul8) allows the creation of crowds of characters, all based on the same base character but with different mutations. The plugin I developed allowed for the editing of characters inside a character creator and the later use of the modified character in gameplay.
+
+{% include button.html button_url='https://codfishacademy.com/' button_title='Visit Codfish Academy' %}
+
 ## Youmio
 
 ![Screenshot of Youmio](/assets/uploads/today-snapshot01.jpg "Youmio")
