@@ -1,69 +1,93 @@
-<p align="center">
-    <h2 align="center">Indigo Minimalist Jekyll Template - <a href="https://sergiokopplin.github.io/indigo/">Demo</a></h2>
-</p>
+# colorcrow.me
 
-<p align="center">This is a simple and minimalist template for Jekyll for those who likes to eat noodles.</p>
+Personal website and blog of Ricardo "Colorcrow" Rodrigues, live at **[colorcrow.me](https://colorcrow.me)**.
 
-***
+It's a [Jekyll](https://jekyllrb.com/) site hosted on GitHub Pages and built on the [Indigo](https://github.com/sergiokopplin/indigo) theme.
 
-<p align="center">
-    <b><a href="README.md#what-has-inside">What has inside</a></b>
-    |
-    <b><a href="README.md#setup">Setup</a></b>
-    |
-    <b><a href="README.md#settings">Settings</a></b>
-    |
-    <b><a href="README.md#how-to">How to</a></b>
-</p>
+## Quick start
 
-<p align="center">
-    Light and Dark themes.
-</p>
+You need Ruby **2.7.x** and Bundler. The `github-pages` gem pins Jekyll 3.9, which runs most reliably on Ruby 2.7. The repo ships a `.ruby-version` file, so `rbenv` or `asdf` pick up the right version automatically.
 
-<p align="center">
-    <img src="https://raw.githubusercontent.com/sergiokopplin/indigo/gh-pages/assets/screen-shot.png" />
-</p>
+```bash
+# 1. Install the pinned Ruby (rbenv example)
+rbenv install 2.7.6
 
-## What has inside
+# 2. Install gems
+gem install bundler
+bundle install
 
-- [Jekyll](https://jekyllrb.com/), [Sass](https://sass-lang.com/) ~[RSCSS](https://rscss.io/)~ and [SVG](https://www.w3.org/Graphics/SVG/);
-- Google Speed: [98/100](https://developers.google.com/speed/pagespeed/insights/?url=http%3A%2F%2Fsergiokopplin.github.io%2Findigo%2F);
-- No JS. :sunglasses:
-
-## Setup
-
-0. :star: to the project. :metal:
-1. Fork the project [Indigo](https://github.com/sergiokopplin/indigo/fork)
-2. Edit `_config.yml` with your data (check <a href="README.md#settings">settings</a> section)
-3. Write some posts :bowtie:
-
-If you want to test locally on your machine, do the following steps also:
-
-1. Install [Jekyll](https://jekyllrb.com) and [Bundler](https://bundler.io/).
-2. Clone the forked repo on your machine
-3. Enter the cloned folder via terminal and run `bundle install`
-4. Then run `bundle exec jekyll serve`
-5. Open it in your browser: `http://localhost:4000`
-6. Do you want an admin panel to edit your posts? You can install this plugin [jekyll-admin](https://jekyll.github.io/jekyll-admin/).
-
-## Settings
-
-You must fill some informations on `_config.yml` to customize your site.
-
-```
-name: John Doe
-bio: 'A Man who travels the world eating noodles'
-picture: 'assets/images/profile.jpg'
-...
-
-and lot of other options, like width, projects, pages, read-time, tags, related posts, animations, multiple-authors, etc.
+# 3. Run the dev server with live reload
+bundle exec jekyll serve --livereload --drafts
 ```
 
-## How To?
+Then open <http://localhost:4000>.
 
-Check the [FAQ](./FAQ.md) if you have any doubt or problem.
+`--drafts` also renders the files in `_drafts/`. Leave it off to see exactly what will be published.
 
+### Other commands
+
+| Command | What it does |
+| --- | --- |
+| `bundle exec jekyll build` | Builds the site into `_site/` |
+| `bundle exec rake` | Runs `html-proofer` on `_site/` to find broken links and images (build first) |
+| `bundle update github-pages` | Updates to the Jekyll and plugin versions that GitHub Pages currently runs |
+
+### Troubleshooting
+
+- **`nokogiri`, `eventmachine` or `ffi` fail to compile.** Install your system's build tools and dev headers. On Debian or Ubuntu that's `sudo apt install build-essential ruby-dev zlib1g-dev`.
+- **`cannot load such file -- webrick`.** You're on Ruby 3.x. Either switch to 2.7, or check that `webrick` is still in the `Gemfile`.
+- **Your changes don't show up.** `_config.yml` isn't watched by the dev server, so restart `jekyll serve` after editing it.
+
+## Project layout
+
+```
+_config.yml        Site settings: title, bio, colours, social links, feature toggles
+_posts/            Blog posts, named YYYY-MM-DD-slug.md
+_projects/         Portfolio projects (a Jekyll collection)
+_drafts/           Templates for new posts and projects
+about.md           About page
+portfolio.md       Portfolio page
+_layouts/          Page templates (default, page, post, compress)
+_includes/         Partials (header, footer, social links, styles, ...)
+_sass/             Theme styles
+assets/uploads/    Images and PDFs used in content, including the CV
+admin/             Netlify CMS (Decap) editor, available at /admin
+```
+
+## Writing content
+
+### Option A: edit the Markdown files
+
+Copy `_drafts/post-template.md` into `_posts/` (or `_drafts/project-template.md` into `_projects/`) and rename it to `YYYY-MM-DD-your-slug.md`. These front-matter fields matter most:
+
+```yaml
 ---
-## License
+layout: post
+category: blog          # use "project" for files in _projects/
+title: My Post
+date: 2024-01-01 12:00
+description: One-line summary shown in listings and SEO
+tag: [gamedev, ai]
+image: /assets/uploads/some-image.png
+headerImage: false      # true shows `image` as a banner
+author: ricardorodrigues
+externalLink: false
+hidden: false           # true keeps it out of listings but still reachable by URL
+---
+```
 
-[MIT](https://kopplin.mit-license.org/) License © Sérgio Kopplin
+Put images in `assets/uploads/` and reference them as `/assets/uploads/file.png`.
+
+### Option B: use the CMS
+
+Go to <https://colorcrow.me/admin> and log in with GitHub. The editor runs in editorial-workflow mode, so every change becomes a pull request (`cms/...` branch) that you merge to publish. The collections and fields are defined in `admin/config.yml`.
+
+After merging CMS changes, run `git pull` before you edit locally.
+
+## Deployment
+
+Pushing to `gh-pages` is the whole deployment. GitHub Pages builds the site and serves it on the custom domain set in `CNAME`. There's no CI or build step to maintain. Pages only allows its own whitelisted plugins, so check that a plugin is supported before adding it to the `Gemfile`.
+
+## Credits
+
+Based on [Indigo](https://github.com/sergiokopplin/indigo) by Sérgio Kopplin ([MIT License](https://kopplin.mit-license.org/)). The original theme FAQ is in [FAQ.md](FAQ.md).
