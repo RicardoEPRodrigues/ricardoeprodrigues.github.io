@@ -132,6 +132,8 @@ exclude:
   [
     "README.md",
     "CLAUDE.md",
+    "Rakefile",
+    "ricardoeprodrigues.github.io.code-workspace",
     "Gemfile",
     "Gemfile.lock",
     "FAQ.md",

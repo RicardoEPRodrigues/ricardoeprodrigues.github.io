@@ -4,6 +4,20 @@ layout: page
 ---
 I am **Ricardo Rodrigues**, a game developer and AI Engineer. I am passionate about games, playing them, and building them. Here are some of my works.
 
+## iliAD
+
+I joined iliAD as a **Senior Game Developer** in October 2025. I work on technology that lets playable demos of new games run inside games that are already released. Much of my work is on streaming video, audio and data between servers and clients. That includes exploring, evaluating and integrating the frameworks and technologies behind those streaming and communication systems.
+
+The work spans a wide range of technologies, including Unreal Engine, Unity, C++, C#, Go, Python and TypeScript.
+
+## Comilito
+
+![Comilito with a sample project open: three scenes stacked in the Tapestry, the effects pad on the right and the Library underneath](/assets/uploads/comilito-screenshot.png "Comilito")
+
+**Comilito** is a personal project: a lightweight desktop soundboard and mixer for Dungeons & Dragons Dungeon Masters. Sounds are split into music, ambience and effects, and combined into scenes. During a session, scenes are stacked in the *Tapestry*, where higher scenes duck the ambience below them and the top-most scene decides which music plays. Projects save automatically, can be exported as a single file, and come with a searchable library, loudness normalisation, downloads from links and waveform cropping.
+
+It's built with [Tauri 2](https://tauri.app), with a **Rust** audio engine ([kira](https://github.com/tesselode/kira)) and a **Svelte**/TypeScript interface. It runs on Linux and Windows. I wrote more about it in [this blog post](/introducing-comilito/).
+
 ## Codfish Academy
 
 Codfish Academy is "a hub for aspiring game developers looking to master Unreal Engine in a modern, high-tech environment." It is also a consulting company for game development companies in need of Unreal Engine knowledge and people.
