@@ -8,6 +8,7 @@ Personal website (colorcrow.me) built with Jekyll on the Indigo theme and served
 - `bundle exec jekyll serve --livereload --drafts`: dev server on http://localhost:4000.
 - `bundle exec jekyll build`: build into `_site/`. Use this to check that a change renders.
 - `bundle exec rake`: run html-proofer on `_site/` (build first).
+- `bundle exec rake cv`: copy the CV from `CV_SOURCE` (default path is in the `Rakefile`) to `assets/uploads/cv-ricardo-rodrigues.pdf`. Keep that target filename stable, because `resume-url` points at it.
 
 ## Constraints
 

@@ -30,6 +30,7 @@ Then open <http://localhost:4000>.
 | --- | --- |
 | `bundle exec jekyll build` | Builds the site into `_site/` |
 | `bundle exec rake` | Runs `html-proofer` on `_site/` to find broken links and images (build first) |
+| `bundle exec rake cv` | Copies the latest CV into the site (see [Updating the résumé](#updating-the-résumé)) |
 | `bundle update github-pages` | Updates to the Jekyll and plugin versions that GitHub Pages currently runs |
 
 ### Troubleshooting
@@ -83,6 +84,17 @@ Put images in `assets/uploads/` and reference them as `/assets/uploads/file.png`
 Go to <https://colorcrow.me/admin> and log in with GitHub. The editor runs in editorial-workflow mode, so every change becomes a pull request (`cms/...` branch) that you merge to publish. The collections and fields are defined in `admin/config.yml`.
 
 After merging CMS changes, run `git pull` before you edit locally.
+
+## Updating the résumé
+
+The nav's *Résumé* link always points to `assets/uploads/cv-ricardo-rodrigues.pdf`, which is set by `resume-url` in `_config.yml`. You never need to rename anything. Edit your CV wherever you keep it, then run:
+
+```bash
+bundle exec rake cv                              # copies from the default source path in the Rakefile
+bundle exec rake cv CV_SOURCE=~/path/to/cv.pdf   # or from any other file
+```
+
+Then commit and push the updated PDF.
 
 ## Deployment
 
