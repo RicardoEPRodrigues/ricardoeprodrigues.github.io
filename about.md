@@ -8,7 +8,7 @@ kicker: Of the author
 
 I am **Ricardo Rodrigues**, a Senior Game Developer at [iliAD]({{ site.url }}/portfolio/#iliad). I am passionate about games: playing them, and building them.
 
-Most of my work sits where games meet artificial intelligence. I spent seven years, from 2017 to 2024, on a Ph.D. in **Affective Computing**, building game characters that feel and express emotion; you can read about [the thesis and its defense]({{ site.url }}/ph-d-thesis-and-defense/). At iliAD I work on streaming playable demos into games that are already released. Before that I worked as a Senior Unreal Engineer with [Codfish Academy]({{ site.url }}/portfolio/#codfish-academy) and as an AI engineer on [Youmio]({{ site.url }}/portfolio/#youmio). Most days that means **Unreal Engine**, **Unity** and **C++**.
+Most of my work sits where games meet artificial intelligence. I spent seven years, from 2017 to 2024, on a Ph.D. in **Affective Computing**, building game characters that feel and express emotion; you can read about [the thesis and its defense]({{ site.url }}/ph-d-thesis-and-defense/). At iliAD I work on streaming playable demos into games that are already released. Before that I was a Senior Unreal Engineer with [Codfish Academy]({{ site.url }}/portfolio/#codfish-academy), and before that an AI engineer on [Youmio]({{ site.url }}/portfolio/#youmio). Most days that means **Unreal Engine**, **Unity** and **C++**.
 
 ## Teaching and community
 

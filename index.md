@@ -3,7 +3,7 @@ layout: home
 title: Home
 kicker: Senior Game Developer · iliAD
 alias: also known as Colorcrow
-intro: I make games and the minds that live inside them, with a Ph.D. in affective computing and past work as an AI engineer on Youmio.
+intro: I make games and the minds that live inside them. At iliAD I build the technology that streams playable demos of new games into games that are already released.
 caption: Ex libris Colorcrow · MMXXII
 featured:
   title: Comilito
@@ -17,14 +17,14 @@ works:
     role: Senior Game Developer · 2025–
     summary: Playable demos of new games, streamed inside games already released.
     url: /portfolio/#iliad
-  - title: Youmio
-    role: AI Engineer · Mr.Kite
-    summary: Speech and text for agents that talk to the player.
-    url: /portfolio/#youmio
   - title: Codfish Academy
     role: Senior Unreal Engineer
     summary: A character creator for Didimo's Popul8 crowd plugin.
     url: /portfolio/#codfish-academy
+  - title: Youmio
+    role: AI Engineer · Mr.Kite
+    summary: Speech and text for agents that talk to the player.
+    url: /portfolio/#youmio
   - title: Adfectus
     role: Game · UE5 · C++
     summary: An arena game for two players, each with a claque.
