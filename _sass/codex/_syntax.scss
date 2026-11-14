@@ -1,0 +1,16 @@
+/* Rouge highlighting on the ink code panel (the panel is dark in both themes). */
+.highlight {
+  .c, .ch, .cm, .c1, .cs, .cd { color: #9C8D6C; font-style: italic; }
+  .cp, .cpf { color: #C9AE6A; }
+  .k, .kc, .kd, .kn, .kp, .kr, .kv { color: #7FC79A; }
+  .kt, .nc, .nn, .no { color: #B7D59F; }
+  .s, .s1, .s2, .sa, .sb, .sc, .sd, .se, .sh, .si, .sr, .ss, .sx, .dl { color: #E3C77D; }
+  .m, .mb, .mf, .mh, .mi, .il, .mo, .mx { color: #E0A46E; }
+  .nf, .fm { color: #F0E3C2; }
+  .na, .nt { color: #8FC2D6; }
+  .nb, .bp, .nv, .vc, .vg, .vi { color: #D9B8E0; }
+  .o, .ow { color: #C9BFA6; }
+  .err { color: #F08A7A; }
+  .gd { color: #F08A7A; }
+  .gi { color: #7FC79A; }
+}

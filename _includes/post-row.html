@@ -1,0 +1,15 @@
+{%- assign p = include.post -%}
+<article class="post-row">
+    <a class="post-row__link" href="{% if p.externalLink %}{{ p.externalLink }}{% else %}{{ site.url }}{{ p.url }}{% endif %}">
+        <time class="post-row__date" datetime="{{ p.date | date_to_xmlschema }}">
+            <span class="post-row__day">{{ p.date | date: "%d" }}</span>
+            <span class="post-row__month">{{ p.date | date: "%b %Y" }}</span>
+        </time>
+        <div class="post-row__text">
+            <h3 class="post-row__title">{{ p.title }}</h3>
+            {% if p.description %}<p class="post-row__desc">{{ p.description }}</p>{% endif %}
+            {% if p.tags.size > 0 %}<span class="post-row__tags">{{ p.tags | join: "  ·  " }}</span>{% endif %}
+        </div>
+        {% include icon.html name="arrow-up-right" class="post-row__arrow" %}
+    </a>
+</article>

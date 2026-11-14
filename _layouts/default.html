@@ -4,81 +4,56 @@ layout: compress
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     {% if site.analytics-google %}
         {% include analytics-google.html %}
     {% endif %}
 
     <meta charset="utf-8">
-    <meta name=viewport content="width=device-width, initial-scale=1">
-    <meta name=author content="{{ site.title }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="{{ site.title | escape }}">
+    {% if site.dark-theme == "auto" %}
+        <meta name="color-scheme" content="light dark">
+    {% endif %}
 
     {% seo %}
 
     {% include favicon.html %}
 
     <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html','' }}">
-    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.url }}{{ "/feed.xml" }}" />
-    
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ site.url }}/feed.xml">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Grenze+Gotisch:wght@400&family=Inter:wght@500;600&family=JetBrains+Mono:wght@400&display=swap">
+    <link rel="stylesheet" href="{{ site.url }}/assets/css/main.css">
+
     <script src="https://kit.fontawesome.com/1dc8156de7.js" crossorigin="anonymous"></script>
 
-    <style>
-
-    {% capture scss_sheet %}
-        {% if site.accent-color %}
-            $delta: {{ site.accent-color }};
-        {% endif %}
-        {% if site.background %}
-            $bg: {{ site.background }};
-        {% endif %}
-
-        {% if site.dark-theme == "auto" %}
-                {% include style.scss %}
-                {% comment %} Reset scss variables. {% endcomment %}
-                $delta: null;
-                $bg: null;
-                @media (prefers-color-scheme: dark) {
-                    {% if site.accent-color-dark %}
-                        $delta: {{ site.accent-color-dark }};
-                    {% endif %}
-                    {% if site.background-dark %}
-                        $bg: {{ site.background-dark }};
-                    {% endif %}
-                    {% include style-dark.scss %}
-                }
-        {% elsif site.dark-theme %}
-            {% if site.accent-color-dark %}
-            $delta: {{ site.accent-color-dark }};
-            {% endif %}
-            {% include style-dark.scss %}
-        {% else %}
-            {% include style.scss %}
-        {% endif %}
-    {% endcapture %}
-
-    {{ scss_sheet | scssify }}
-    </style>
-
     {% if page.externalLink %}
-        <meta http-equiv="refresh" content="0; URL='{{ page.externalLink }}'"/>
+        <meta http-equiv="refresh" content="0; URL='{{ page.externalLink }}'">
     {% endif %}
 </head>
 <body>
-    <div class="wrapper-{% if site.width == "normal" %}normal{% elsif site.width == "large" %}large{% endif %}">
-        {% if page.layout == "post" %}
-            <div class="post">
-        {% else %}
-            {% if showHeader != true %}
-                <div class="page {{ page.title | downcase }}">
-            {% else %}
-                <div class="{{ page.title | downcase }}">
-            {% endif %}
-        {% endif %}
+    {% include site-header.html %}
 
-            {{ content }}
-            </div>
-                </div>
-            </div>
-    </div>
+    <main id="content">
+        {{ content }}
+    </main>
+
+    {% include footer.html %}
+
+    <script>
+        /* Markdown images with a title, alone in their paragraph, become a figure with a caption. */
+        document.querySelectorAll(".prose p > img[title]:only-child").forEach(function (img) {
+            var p = img.parentElement;
+            if (p.textContent.trim() !== "") { return; }
+            var figure = document.createElement("figure");
+            var caption = document.createElement("figcaption");
+            caption.textContent = img.getAttribute("title");
+            p.replaceWith(figure);
+            figure.appendChild(img);
+            figure.appendChild(caption);
+        });
+    </script>
 </body>
 </html>

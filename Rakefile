@@ -9,7 +9,8 @@ CV_SOURCE = ENV.fetch('CV_SOURCE', '/media/ricardo/data/GoogleDrive/Trabalhos/01
 desc 'Check _site/ for broken links and images (run jekyll build first)'
 task :test do
   require 'html-proofer'
-  HTMLProofer.check_directory('./_site').run
+  # alt="" marks decorative images (the crow, the byline avatar), which is correct.
+  HTMLProofer.check_directory('./_site', empty_alt_ignore: true).run
 end
 
 desc "Copy the latest CV from CV_SOURCE to #{CV_TARGET}"

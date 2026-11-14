@@ -1,0 +1,171 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
+  color: var(--text);
+  font-family: $font-body;
+  font-size: 19px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: var(--accent);
+}
+
+::selection {
+  color: var(--accent-text);
+  background: var(--accent);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.shell {
+  width: 100%;
+  max-width: $shell;
+  margin: 0 auto;
+  padding: 0 $gutter;
+
+  @media #{$tablet} {
+    padding: 0 40px;
+  }
+
+  @media #{$phone} {
+    padding: 0 $gutter-small;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.icon {
+  width: 1em;
+  height: 1em;
+  flex: none;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.kicker {
+  @include caps;
+  color: var(--accent);
+  margin: 0;
+}
+
+.double-rule {
+  @include double-rule;
+}
+
+/* Buttons. `.button` is also used inside post bodies and by _includes/button.html. */
+.btn,
+.button {
+  @include caps;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 22px;
+  border: 1px solid var(--text);
+  color: var(--text);
+  background: transparent;
+  text-decoration: none;
+  transition: background 0.15s ease, color 0.15s ease;
+
+  .icon {
+    font-size: 16px;
+  }
+
+  &:hover {
+    background: var(--text);
+    color: var(--bg);
+  }
+}
+
+.btn--primary,
+.button {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-text);
+
+  &:hover {
+    background: var(--text);
+    border-color: var(--text);
+    color: var(--bg);
+  }
+}
+
+.buttons-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin: 8px 0 32px;
+}
+
+/* A gilt line with three lozenges in the middle. */
+.fleuron {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  max-width: 720px;
+  margin: 0 auto;
+
+  &::before,
+  &::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--gold);
+  }
+
+  span {
+    width: 7px;
+    height: 7px;
+    transform: rotate(45deg);
+    background: var(--gold);
+
+    &:nth-child(2) {
+      width: 10px;
+      height: 10px;
+      background: var(--accent);
+    }
+  }
+}
+
+.crow {
+  display: block;
+}

@@ -2,7 +2,7 @@
 
 Personal website and blog of Ricardo "Colorcrow" Rodrigues, live at **[colorcrow.me](https://colorcrow.me)**.
 
-It's a [Jekyll](https://jekyllrb.com/) site hosted on GitHub Pages and built on the [Indigo](https://github.com/sergiokopplin/indigo) theme.
+It's a [Jekyll](https://jekyllrb.com/) site hosted on GitHub Pages originally built on the [Indigo](https://github.com/sergiokopplin/indigo) theme and now restyled as "Verdigris Codex", a medieval-illumination design kept in `pencil/design.pen`.
 
 ## Quick start
 
@@ -48,9 +48,10 @@ _projects/         Portfolio projects (a Jekyll collection)
 _drafts/           Templates for new posts and projects
 about.md           About page
 portfolio.md       Portfolio page
-_layouts/          Page templates (default, page, post, compress)
-_includes/         Partials (header, footer, social links, styles, ...)
-_sass/             Theme styles
+_layouts/          Page templates (default, home, page, post, compress)
+_includes/         Partials (header, footer, post rows, icons, roman numerals, ...)
+_sass/codex/       Styles (tokens, layout, prose); entry point is assets/css/main.scss
+pencil/            Design source (Pencil), not published
 assets/uploads/    Images and PDFs used in content, including the CV
 admin/             Netlify CMS (Decap) editor, available at /admin
 ```

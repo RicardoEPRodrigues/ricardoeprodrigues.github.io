@@ -1,8 +1,19 @@
 ---
 layout: default
 ---
-{% include header.html %}
+{%- comment -%}
+    Pages written in markdown (About, Portfolio). The CMS edits `title`, `kicker` and the body;
+    the drop cap, headings and image plates all come from the .prose styles.
+{%- endcomment -%}
+<div class="shell">
+    <header class="page-head page-head--center">
+        {% if page.kicker %}<p class="kicker">{{ page.kicker }}</p>{% endif %}
+        <h1 class="page-head__title">{{ page.title }}</h1>
+    </header>
 
-{{content}}
+    <div class="fleuron" aria-hidden="true"><span></span><span></span><span></span></div>
 
-{% include footer.html %}
+    <div class="article-body prose prose--{{ page.title | slugify }}">
+        {{ content }}
+    </div>
+</div>

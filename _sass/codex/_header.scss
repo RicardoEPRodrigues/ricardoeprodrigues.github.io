@@ -1,0 +1,158 @@
+.site-header {
+  background: var(--bg);
+}
+
+.site-header__bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding-top: 22px;
+  padding-bottom: 22px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.brand__mark {
+  @include display;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  font-size: 30px;
+  line-height: 1;
+  padding-top: 3px;
+  color: var(--accent-text);
+  background: var(--accent);
+  border: 2px solid var(--gold);
+}
+
+.brand__name {
+  @include display;
+  font-size: 30px;
+  line-height: 1;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  a {
+    @include caps;
+    color: var(--text);
+    text-decoration: none;
+
+    &:hover,
+    &[aria-current] {
+      color: var(--accent);
+    }
+  }
+
+  .btn {
+    padding: 9px 16px;
+
+    .icon {
+      font-size: 14px;
+    }
+
+    &:hover {
+      color: var(--bg);
+    }
+  }
+}
+
+/* The menu toggle only shows on narrow screens. It's a checkbox, so it works without JS. */
+.nav-toggle {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.nav-toggle-label {
+  display: none;
+  color: var(--text);
+  font-size: 26px;
+  cursor: pointer;
+
+  .icon--close {
+    display: none;
+  }
+}
+
+.nav-toggle:focus-visible + .nav-toggle-label {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+@media #{$tablet} {
+  .site-header__bar {
+    flex-wrap: wrap;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  .brand__mark {
+    width: 32px;
+    height: 32px;
+    font-size: 24px;
+  }
+
+  .brand__name {
+    font-size: 24px;
+  }
+
+  .nav-toggle-label {
+    display: inline-flex;
+  }
+
+  .site-nav {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    padding: 8px 0 4px;
+
+    li {
+      width: 100%;
+      border-top: 1px solid var(--rule);
+    }
+
+    a {
+      display: block;
+      padding: 16px 0;
+    }
+
+    .btn {
+      display: inline-flex;
+      margin: 16px 0 8px;
+      padding: 12px 18px;
+    }
+  }
+
+  .nav-toggle:checked ~ .site-nav {
+    display: flex;
+  }
+
+  .nav-toggle:checked + .nav-toggle-label {
+    .icon--open {
+      display: none;
+    }
+
+    .icon--close {
+      display: block;
+    }
+  }
+}

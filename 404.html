@@ -1,14 +1,11 @@
 ---
 layout: default
-permalink: /404.html 
+title: Lost
+permalink: /404.html
 ---
-
-<section class="lost-container">
-  <h1>Uh oh!</h1>
-  <div class="link">
-    <img class="selfie" alt="{{ site.title }}" src="{{ site.url }}/assets/images/error.gif" />
-  </div>
-  <br />
-  <br />
-  <a href="/">Take me home!</a>
+<section class="shell lost">
+    <img class="crow" src="{{ site.url }}/assets/images/crow.svg" alt="">
+    <h1 class="page-head__title">Lost in the margins</h1>
+    <p>This page isn't in the codex. The crow has looked everywhere.</p>
+    <a class="btn btn--primary" href="{{ site.url }}/">Take me home{% include icon.html name="arrow-right" %}</a>
 </section>

@@ -1,49 +1,81 @@
 ---
-layout: page
+layout: default
 ---
+{%- assign author = site.authors[page.author] -%}
+<div class="shell">
+    <article>
+        <header class="article-head">
+            <p class="kicker">
+                {% if page.category == "project" %}Project{% else %}Blog{% endif %}
+                &nbsp;·&nbsp; <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%-d %B %Y" }}</time>
+                {% if site.read-time %}&nbsp;·&nbsp; {% include read-time.html %}{% endif %}
+            </p>
+            <h1 class="article-head__title">{{ page.title }}</h1>
+            {% if page.description %}<p class="article-head__desc">{{ page.description }}</p>{% endif %}
+            {% if author %}
+                <span class="byline">
+                    <img src="{% if author.external-image %}{{ author.picture }}{% else %}{{ site.url }}/{{ author.picture }}{% endif %}" alt="">
+                    {{ author.name }}
+                </span>
+            {% endif %}
+        </header>
 
-{% if page.image and page.headerImage %}
-    <img class="title-image" src="{{ page.image }}" alt="{{ page.title }}">
-{% endif %}
+        <div class="fleuron" aria-hidden="true"><span></span><span></span><span></span></div>
 
-<h1 class="title">{{ page.title }}</h1>
+        <div class="article-body">
+            {% if page.image and page.headerImage %}
+                <figure class="plate article-cover"><img src="{{ page.image }}" alt=""></figure>
+            {% endif %}
 
-<span class="date">
-    <time datetime="{{ page.date | date:"%d-%m-%Y" }}">{{ page.date | date: "%A. %B %d, %Y" }}</time>
-    {% if site.read-time %} - {% include read-time.html %}{% endif %}
-</span>
+            <div class="prose">
+                {{ content }}
+            </div>
 
-{% if site.show-tags %}
-    <div class="post-tags">
-        {% for tag in page.tags %}
-            <a class="item" href="{{ site.url }}/tags/#{{ tag | slugify }}">{{ tag }}</a>
-        {% endfor %}
-    </div>
-{% endif %}
+            <div class="finis" aria-hidden="true">
+                <img class="crow" src="{{ site.url }}/assets/images/crow.svg" alt="">
+                <span>Finis</span>
+            </div>
 
-{{content}}
+            {% if site.show-tags and page.tags.size > 0 %}
+                <ul class="tags article-tags" aria-label="Tags">
+                    {% for tag in page.tags %}
+                        <li><a class="tag" href="{{ site.url }}/tags/#{{ tag | slugify }}">{{ tag }}</a></li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
 
-{% if site.post-advance-links contains page.category %}
-    <div class="blog-navigation">
-        {% if page.previous.hidden == false and page.previous.url %}
-            <a class="prev" href="{{ site.url }}{{ page.previous.url }}">&laquo; {{ page.previous.title }}</a>
-        {% else %}
-            <a class="prev"></a>
+            {% if site.related %}
+                {% include related.html %}
+            {% endif %}
+        </div>
+    </article>
+
+    {% if site.post-advance-links contains page.category %}
+        {%- assign prev_ok = false -%}
+        {%- assign next_ok = false -%}
+        {%- if page.previous.url and page.previous.hidden != true -%}{%- assign prev_ok = true -%}{%- endif -%}
+        {%- if page.next.url and page.next.hidden != true -%}{%- assign next_ok = true -%}{%- endif -%}
+        {% if prev_ok or next_ok %}
+            <nav class="prev-next" aria-label="More entries">
+                {% if prev_ok %}
+                    <a class="prev-next__link" href="{{ site.url }}{{ page.previous.url }}">
+                        <span class="prev-next__kicker">{% include icon.html name="arrow-left" %}Previous</span>
+                        <span class="prev-next__title">{{ page.previous.title }}</span>
+                    </a>
+                {% else %}
+                    <span></span>
+                {% endif %}
+                {% if next_ok %}
+                    <a class="prev-next__link prev-next__link--next" href="{{ site.url }}{{ page.next.url }}">
+                        <span class="prev-next__kicker">Next{% include icon.html name="arrow-right" %}</span>
+                        <span class="prev-next__title">{{ page.next.title }}</span>
+                    </a>
+                {% endif %}
+            </nav>
         {% endif %}
-        {% if page.next.hidden == false and page.next.url %}
-            <a class="next" href="{{ site.url }}{{ page.next.url }}">{{ page.next.title }} &raquo;</a>
-        {% endif %}
-    </div>
-{% endif %}
+    {% endif %}
 
-{% if site.related %}
-    {% include related.html %}
-{% endif %}
-
-{% if site.show-author %}
-    {% include author.html %}
-{% endif %}
-
-{% if site.disqus.categories contains page.category %}
-    {% include disqus.html %}
-{% endif %}
+    {% if site.disqus.categories contains page.category %}
+        {% include disqus.html %}
+    {% endif %}
+</div>

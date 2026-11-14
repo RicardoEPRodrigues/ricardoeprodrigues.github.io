@@ -14,19 +14,52 @@ collections:
     editor:
       preview: false
     files:
+      - label: 'Home Page'
+        name: 'home'
+        file: 'index.md'
+        fields:
+          - { label: 'Title', name: 'title', widget: 'hidden', default: 'Home' }
+          - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'home' }
+          - { label: 'Kicker', name: 'kicker', widget: 'string', hint: 'Small capitals above the name.' }
+          - { label: 'Also known as', name: 'alias', widget: 'string', required: false }
+          - { label: 'Introduction', name: 'intro', widget: 'text', hint: 'Markdown. Its first letter becomes the illuminated initial.' }
+          - { label: 'Portrait caption', name: 'caption', widget: 'string', required: false }
+          - label: 'Featured work'
+            name: 'featured'
+            widget: 'object'
+            required: false
+            fields:
+              - { label: 'Title', name: 'title', widget: 'string' }
+              - { label: 'Link', name: 'url', widget: 'string', required: false, hint: 'A path on this site, like /portfolio/#comilito' }
+              - { label: 'Image', name: 'image', widget: 'image', required: false }
+              - { label: 'Image description', name: 'image_alt', widget: 'string', required: false }
+              - { label: 'Meta', name: 'meta', widget: 'string', required: false, hint: 'Small capitals, e.g. Personal project · Rust' }
+              - { label: 'Blurb', name: 'blurb', widget: 'text', required: false }
+          - label: 'Works'
+            name: 'works'
+            widget: 'list'
+            required: false
+            summary: '{{fields.title}}'
+            fields:
+              - { label: 'Title', name: 'title', widget: 'string' }
+              - { label: 'Role', name: 'role', widget: 'string', required: false }
+              - { label: 'Summary', name: 'summary', widget: 'string', required: false }
+              - { label: 'Link', name: 'url', widget: 'string', required: false }
       - label: 'About Page'
         name: 'about'
         file: 'about.md'
         fields:
           - { label: 'Title', name: 'title', widget: 'hidden', default: 'About' }
           - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'page' }
+          - { label: 'Kicker', name: 'kicker', widget: 'string', required: false, hint: 'Small capitals above the title.' }
           - { label: 'Body', name: 'body', widget: 'markdown' }
       - label: 'Portfolio'
         name: 'portfolio'
         file: 'portfolio.md'
         fields:
-          - { label: 'Title', name: 'title', widget: 'hidden', default: 'About' }
+          - { label: 'Title', name: 'title', widget: 'hidden', default: 'Portfolio' }
           - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'page' }
+          - { label: 'Kicker', name: 'kicker', widget: 'string', required: false, hint: 'Small capitals above the title.' }
           - { label: 'Body', name: 'body', widget: 'markdown' }
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
     label: "Blog" # Used in the UI

@@ -1,16 +1,22 @@
 ---
-layout: page
+layout: default
 title: Projects
+lede: Games, engines and websites, most of them made with friends.
 ---
-<section class="list">
-    {% for post in site.projects %}
-        {% if post.hidden != true %}
-            <div class="item {% if post.star %}star{% endif %}">
-                <a class="url" href="{% if post.externalLink %}{{ post.externalLink }}{% else %}{{ site.url }}{{ post.url }}{% endif %}">
-                    <aside><time datetime="{{ post.date | date:"%d-%m-%Y" }}">{{ post.date | date: "%b %d %Y" }}</time></aside>
-                    <h3 class="title">{{ post.title }}</h3>
-                </a>
-            </div>
-        {% endif %}
-    {% endfor %}
-</section>
+{%- assign projects = site.projects | where_exp: "p", "p.hidden != true" | sort: "date" | reverse -%}
+<div class="shell">
+    <header class="page-head">
+        <div>
+            <p class="kicker">From the workshop</p>
+            <h1 class="page-head__title">Projects</h1>
+            <p class="page-head__lede">{{ page.lede }}</p>
+        </div>
+        <img class="crow page-head__crow" src="{{ site.url }}/assets/images/crow.svg" alt="">
+    </header>
+
+    <div class="year-group__posts list-end">
+        {% for post in projects %}
+            {% include post-row.html post=post %}
+        {% endfor %}
+    </div>
+</div>

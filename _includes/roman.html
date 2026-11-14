@@ -1,0 +1,11 @@
+{%- comment -%} Writes include.n (1 to 3999) in roman numerals. {%- endcomment -%}
+{%- assign _n = include.n | plus: 0 -%}
+{%- assign _th = "|M|MM|MMM" | split: "|" -%}
+{%- assign _hu = "|C|CC|CCC|CD|D|DC|DCC|DCCC|CM" | split: "|" -%}
+{%- assign _te = "|X|XX|XXX|XL|L|LX|LXX|LXXX|XC" | split: "|" -%}
+{%- assign _un = "|I|II|III|IV|V|VI|VII|VIII|IX" | split: "|" -%}
+{%- assign _a = _n | divided_by: 1000 -%}
+{%- assign _b = _n | modulo: 1000 | divided_by: 100 -%}
+{%- assign _c = _n | modulo: 100 | divided_by: 10 -%}
+{%- assign _d = _n | modulo: 10 -%}
+{{- _th[_a] }}{{ _hu[_b] }}{{ _te[_c] }}{{ _un[_d] -}}

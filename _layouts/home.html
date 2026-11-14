@@ -1,0 +1,94 @@
+---
+layout: default
+---
+{%- comment -%}
+    The home page. Its words (kicker, alias, intro, caption, featured work and the works list)
+    live in the front matter of index.md, which the CMS edits as "Home Page".
+{%- endcomment -%}
+{%- assign author = site.authors.ricardorodrigues -%}
+{%- assign name_parts = author.name | default: site.title | split: " " -%}
+
+<section class="shell hero">
+    <div class="hero__intro">
+        {% if page.kicker %}<p class="kicker">{{ page.kicker }}</p>{% endif %}
+        <h1 class="hero__name">{% for part in name_parts %}<span>{{ part }}</span>{% endfor %}</h1>
+        {% if page.alias %}<p class="hero__alias">{{ page.alias }}</p>{% endif %}
+        {% if page.intro %}<div class="hero__bio">{{ page.intro | markdownify }}</div>{% endif %}
+        <div class="hero__actions">
+            <a class="btn btn--primary" href="{{ site.url }}/blog/">Read the blog{% include icon.html name="arrow-right" %}</a>
+            <a class="btn" href="{{ site.url }}/portfolio/">See the portfolio</a>
+            {% include social-links.html %}
+        </div>
+    </div>
+
+    <figure class="portrait">
+        <a class="portrait__arch" href="{{ site.url }}/about/" aria-label="About me">
+            <img src="{% if site.external-image %}{{ site.picture }}{% else %}{{ site.url }}/{{ site.picture }}{% endif %}" alt="Portrait of {{ author.name }}">
+        </a>
+        <img class="crow portrait__crow" src="{{ site.url }}/assets/images/crow.svg" alt="">
+        {% if page.caption %}<figcaption class="portrait__caption">{{ page.caption }}</figcaption>{% endif %}
+    </figure>
+</section>
+
+{%- assign recent = site.posts | where_exp: "p", "p.hidden != true" -%}
+{% if recent.size > 0 %}
+<section class="shell section">
+    <div class="section-head">
+        <div>
+            <p class="kicker">From the blog</p>
+            <h2 class="section-head__title">Lately Written</h2>
+        </div>
+        <a class="more-link" href="{{ site.url }}/blog/">All posts{% include icon.html name="arrow-right" %}</a>
+    </div>
+    <div class="double-rule"></div>
+    {% for post in recent limit: 3 %}
+        {% include post-row.html post=post %}
+    {% endfor %}
+</section>
+{% endif %}
+
+{% if page.featured or page.works %}
+<section class="works">
+    <div class="shell">
+        <div class="section-head">
+            <div>
+                <p class="kicker">From the portfolio</p>
+                <h2 class="section-head__title">Works &amp; Deeds</h2>
+            </div>
+            <a class="more-link" href="{{ site.url }}/portfolio/">Full portfolio{% include icon.html name="arrow-right" %}</a>
+        </div>
+        <div class="double-rule"></div>
+
+        <div class="works__body">
+            {% if page.featured %}
+                {%- assign f = page.featured -%}
+                <a class="featured" href="{{ f.url | default: '/portfolio/' | relative_url }}">
+                    {% if f.image %}<span class="plate"><img src="{{ f.image | relative_url }}" alt="{{ f.image_alt | default: f.title }}"></span>{% endif %}
+                    <span class="featured__text">
+                        {% if f.meta %}<span class="featured__meta">{{ f.meta }}</span>{% endif %}
+                        <span class="featured__title">{{ f.title }}</span>
+                        {% if f.blurb %}<span class="featured__blurb">{{ f.blurb }}</span>{% endif %}
+                    </span>
+                </a>
+            {% endif %}
+
+            {% if page.works %}
+                <ol class="ledger">
+                    {% for w in page.works %}
+                        <li class="ledger__item">
+                            <a href="{{ w.url | default: '/portfolio/' | relative_url }}">
+                                <span class="ledger__numeral">{% include roman.html n=forloop.index %}</span>
+                                <span class="ledger__text">
+                                    <span class="ledger__title">{{ w.title }}</span>
+                                    {% if w.role %}<span class="ledger__role">{{ w.role }}</span>{% endif %}
+                                    {% if w.summary %}<span class="ledger__summary">{{ w.summary }}</span>{% endif %}
+                                </span>
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ol>
+            {% endif %}
+        </div>
+    </div>
+</section>
+{% endif %}

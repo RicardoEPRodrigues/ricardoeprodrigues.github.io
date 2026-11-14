@@ -1,0 +1,83 @@
+/* Design tokens. Names match the variables in pencil/design.pen. */
+
+$font-display: "Grenze Gotisch", "UnifrakturMaguntia", Georgia, serif;
+$font-body: "EB Garamond", Garamond, Georgia, serif;
+$font-ui: "Inter", "Helvetica Neue", Arial, sans-serif;
+$font-mono: "JetBrains Mono", Consolas, Menlo, monospace;
+
+$shell: 1440px;
+$gutter: 80px;
+$gutter-small: 16px;
+$prose-width: 740px;
+
+$tablet: "(max-width: 1050px)";
+$phone: "(max-width: 700px)";
+
+@mixin light-tokens($accent, $bg) {
+  --bg: #{$bg};
+  --surface: #FBF8EE;
+  --side-bg: #E8E1C9;
+  --text: #231C17;
+  --muted: #6E6253;
+  --rule: #CDBE92;
+  --gold: #B39A5B;
+  --accent: #{$accent};
+  --accent-text: #FBF8EE;
+  --accent-wash: #DCE8D6;
+  --ink: #231C17;
+  --ink-text: #F3EFE2;
+  color-scheme: light;
+}
+
+@mixin dark-tokens($accent, $bg) {
+  --bg: #{$bg};
+  --surface: #1D1A15;
+  --side-bg: #100E0B;
+  --text: #EDE6D3;
+  --muted: #A3977F;
+  --rule: #3E362A;
+  --gold: #A88E55;
+  --accent: #{$accent};
+  --accent-text: #10140F;
+  --accent-wash: #1A2A1F;
+  --ink: #0B0A08;
+  --ink-text: #EDE6D3;
+  color-scheme: dark;
+}
+
+/* Small spaced capitals: kickers, meta, buttons. */
+@mixin caps($size: 12px) {
+  font-family: $font-ui;
+  font-size: $size;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+@mixin display {
+  font-family: $font-display;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+/* Two gold lines, the thick one on top. */
+@mixin double-rule {
+  height: 6px;
+  border-top: 2px solid var(--gold);
+  border-bottom: 1px solid var(--gold);
+}
+
+/* An illuminated initial: the first letter set in a verdigris box with a gilt edge. */
+@mixin illuminated($size: 3.6em, $border: 3px) {
+  float: left;
+  font-family: $font-display;
+  font-weight: 400;
+  font-style: normal;
+  font-size: $size;
+  line-height: 1;
+  color: var(--accent-text);
+  background: var(--accent);
+  border: $border solid var(--gold);
+  padding: 0.08em 0.3em 0;
+  margin: 0.08em 0.22em 0 0;
+}

@@ -1,18 +1,15 @@
-<footer class="footer-main">
-    {{ site.title }} © {{ site.time | date: '%Y' }}
-
-    <a class="link" href="{{ site.url }}/feed.xml" target="_blank">
-        <i class="fa-solid fa-rss"></i>
-    </a>
-
-    <p class="extra">
-        <a class="link" href="https://github.com/sergiokopplin/indigo">Indigo theme</a>
-        by
-        <a class="link" href="https://github.com/sergiokopplin/indigo">Kopplin</a>
-        and
-        <a class="link" href="https://github.com/RicardoEPRodrigues/ricardoeprodrigues.github.io">Rodrigues</a>
-    
-        <br/>
-        <a class="link member" href="{{ site.url }}/admin/">Member Login</a>
-    </p>
+<footer class="site-footer">
+    <div class="shell">
+        <div class="site-footer__top">
+            <div>
+                <p class="site-footer__name">Colorcrow</p>
+                {% if site.motto %}<p class="site-footer__motto">{{ site.motto }}</p>{% endif %}
+            </div>
+            {% include social-links.html feed=true %}
+        </div>
+        <div class="site-footer__bottom">
+            <span>&copy; {% assign _year = site.time | date: "%Y" %}{% include roman.html n=_year %} {{ site.authors.ricardorodrigues.name | default: site.title }}</span>
+            <span>Written with Jekyll &middot; <a href="{{ site.url }}/admin/">Edited with Netlify CMS</a></span>
+        </div>
+    </div>
 </footer>

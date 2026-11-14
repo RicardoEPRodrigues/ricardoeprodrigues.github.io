@@ -1,0 +1,35 @@
+{%- comment -%} Which nav item is current. Posts count as Blog, projects as Portfolio. {%- endcomment -%}
+{%- assign current = page.title -%}
+{%- if page.layout == "post" -%}
+    {%- if page.category == "project" -%}{%- assign current = "Portfolio" -%}{%- else -%}{%- assign current = "Blog" -%}{%- endif -%}
+{%- endif -%}
+<header class="site-header">
+    <div class="shell site-header__bar">
+        <a class="brand" href="{{ site.url }}/" aria-label="{{ site.title }}, home">
+            <span class="brand__mark" aria-hidden="true">C</span>
+            <span class="brand__name">Colorcrow</span>
+        </a>
+
+        <input class="nav-toggle" type="checkbox" id="nav-toggle" aria-label="Show the menu">
+        <label class="nav-toggle-label" for="nav-toggle" aria-hidden="true">
+            {% include icon.html name="menu" class="icon--open" %}
+            {% include icon.html name="x" class="icon--close" %}
+        </label>
+
+        <ul class="site-nav">
+            <li><a href="{{ site.url }}/"{% if current == "Home" %} aria-current="page"{% endif %}>Home</a></li>
+            {% if site.blog %}<li><a href="{{ site.url }}/blog/"{% if current == "Blog" %} aria-current="page"{% endif %}>Blog</a></li>{% endif %}
+            {% if site.portfolio %}<li><a href="{{ site.url }}/portfolio/"{% if current == "Portfolio" %} aria-current="page"{% endif %}>Portfolio</a></li>{% endif %}
+            {% if site.show_projects %}<li><a href="{{ site.url }}/projects/"{% if current == "Projects" %} aria-current="page"{% endif %}>Projects</a></li>{% endif %}
+            {% if site.about %}<li><a href="{{ site.url }}/about/"{% if current == "About" %} aria-current="page"{% endif %}>About</a></li>{% endif %}
+            {% if site.resume %}
+                <li>
+                    <a class="btn" href="{% if site.resume-external %}{{ site.resume-url }}{% else %}{{ site.url }}/{{ site.resume-url }}{% endif %}">
+                        {% include icon.html name="scroll" %}Résumé
+                    </a>
+                </li>
+            {% endif %}
+        </ul>
+    </div>
+    <div class="shell"><div class="double-rule"></div></div>
+</header>

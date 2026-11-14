@@ -1,0 +1,37 @@
+---
+# Front matter so Jekyll runs Liquid here: the colours come from _config.yml.
+---
+
+/* Verdigris Codex. The design lives in pencil/design.pen. */
+
+$light-accent: {{ site.accent-color | default: "#2B7A47" }};
+$light-bg: {{ site.background | default: "#F3EFE2" }};
+$dark-accent: {{ site.accent-color-dark | default: "#5DB27A" }};
+$dark-bg: {{ site.background-dark | default: "#15130F" }};
+
+@import "codex/tokens";
+
+:root {
+  @include light-tokens($light-accent, $light-bg);
+}
+
+{% if site.dark-theme == "auto" %}
+@media (prefers-color-scheme: dark) {
+  :root {
+    @include dark-tokens($dark-accent, $dark-bg);
+  }
+}
+{% elsif site.dark-theme == true %}
+:root {
+  @include dark-tokens($dark-accent, $dark-bg);
+}
+{% endif %}
+
+@import "codex/base";
+@import "codex/header";
+@import "codex/footer";
+@import "codex/sections";
+@import "codex/home";
+@import "codex/article";
+@import "codex/prose";
+@import "codex/syntax";

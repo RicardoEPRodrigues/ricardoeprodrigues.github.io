@@ -1,0 +1,311 @@
+/* Markdown bodies: posts, projects, About and Portfolio. Everything the CMS writes lands here,
+   so all of the illumination is applied by selectors, never by markup in the content. */
+
+.prose {
+  font-size: 21px;
+  line-height: 1.6;
+
+  @media #{$phone} {
+    font-size: 19px;
+  }
+
+  > :first-child {
+    margin-top: 0;
+  }
+
+  p,
+  ul,
+  ol,
+  table,
+  dl {
+    margin: 0 0 26px;
+  }
+
+  /* The illuminated initial. When the body opens with an image on its own, it goes on the
+     paragraph after it. */
+  > p:first-child::first-letter,
+  > p:first-child:has(> img:only-child) + p::first-letter,
+  > figure:first-child + p::first-letter {
+    @include illuminated;
+  }
+
+  > p:first-child:has(> img:only-child)::first-letter {
+    float: none;
+    font: inherit;
+    color: inherit;
+    background: none;
+    border: 0;
+    padding: 0;
+    margin: 0;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @include display;
+    line-height: 1.1;
+    scroll-margin-top: 24px;
+  }
+
+  h1,
+  h2 {
+    font-size: 42px;
+    color: var(--accent);
+    margin: 56px 0 24px;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 72px;
+      height: 2px;
+      margin-top: 12px;
+      background: var(--gold);
+    }
+
+    @media #{$phone} {
+      font-size: 34px;
+    }
+  }
+
+  h3 {
+    font-size: 30px;
+    margin: 40px 0 16px;
+  }
+
+  h4,
+  h5,
+  h6 {
+    @include caps(13px);
+    color: var(--accent);
+    margin: 32px 0 12px;
+  }
+
+  a:not(.button) {
+    color: var(--accent);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+
+    &:hover {
+      text-decoration-thickness: 2px;
+    }
+  }
+
+  strong {
+    font-weight: 600;
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 8px;
+
+    > li {
+      position: relative;
+      padding-left: 24px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.62em;
+        width: 7px;
+        height: 7px;
+        transform: rotate(45deg);
+        background: var(--accent);
+      }
+    }
+  }
+
+  ol {
+    padding-left: 32px;
+
+    > li::marker {
+      font-family: $font-display;
+      color: var(--accent);
+    }
+  }
+
+  li {
+    margin-bottom: 10px;
+
+    > ul,
+    > ol {
+      margin: 10px 0 0;
+    }
+  }
+
+  blockquote {
+    margin: 0 0 26px;
+    padding: 20px 28px;
+    background: var(--accent-wash);
+    border-left: 4px solid var(--accent);
+    font-style: italic;
+    font-size: 1.08em;
+    line-height: 1.5;
+
+    > :last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* Images with a title become a gilt plate with an italic caption (see _layouts/default.html). */
+  figure {
+    margin: 0 0 32px;
+  }
+
+  figcaption {
+    margin-top: 12px;
+    text-align: center;
+    font-style: italic;
+    font-size: 17px;
+    color: var(--muted);
+  }
+
+  > p > img:only-child,
+  figure > img {
+    padding: 8px;
+    background: var(--surface);
+    border: 1px solid var(--gold);
+  }
+
+  hr {
+    position: relative;
+    height: 10px;
+    margin: 48px auto;
+    border: 0;
+    background: linear-gradient(var(--gold), var(--gold)) left center / 44% 1px no-repeat,
+      linear-gradient(var(--gold), var(--gold)) right center / 44% 1px no-repeat;
+    overflow: visible;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 9px;
+      height: 9px;
+      background: var(--accent);
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+  }
+
+  code {
+    font-family: $font-mono;
+    font-size: 0.78em;
+    padding: 2px 5px;
+    background: var(--surface);
+    border: 1px solid var(--rule);
+  }
+
+  pre {
+    margin: 0 0 26px;
+    padding: 22px 26px;
+    overflow-x: auto;
+    background: var(--ink);
+    color: var(--ink-text);
+    border-top: 3px solid var(--gold);
+    font-size: 15px;
+    line-height: 1.6;
+
+    code {
+      font-size: inherit;
+      padding: 0;
+      background: none;
+      border: 0;
+      color: inherit;
+    }
+  }
+
+  div.highlighter-rouge,
+  figure.highlight {
+    margin: 0 0 26px;
+
+    pre {
+      margin: 0;
+    }
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 18px;
+  }
+
+  th {
+    @include caps(11px);
+    color: var(--accent);
+    text-align: left;
+    border-bottom: 2px solid var(--gold);
+    padding: 10px 12px 10px 0;
+  }
+
+  td {
+    border-bottom: 1px solid var(--rule);
+    padding: 10px 12px 10px 0;
+    vertical-align: top;
+  }
+
+  iframe {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto 26px;
+    border: 0;
+  }
+
+  iframe[src*="youtube"],
+  iframe[src*="blueprintue"] {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    border: 1px solid var(--gold);
+  }
+
+  /* Roundel for the About page portrait. */
+  &.prose--about > p:first-child > img:only-child {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--gold);
+    background: none;
+  }
+}
+
+/* Helpers kept from the old theme, used inside some posts. */
+.two-column-container {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 26px;
+
+  .column {
+    flex: 1;
+    min-width: 0;
+  }
+
+  @media #{$phone} {
+    flex-direction: column;
+  }
+}
+
+.caption {
+  display: block;
+  text-align: center;
+  font-style: italic;
+  font-size: 17px;
+  color: var(--muted);
+}
+
+.spoiler {
+  background: var(--text);
+  color: var(--text);
+  transition: background 0.2s ease;
+
+  &:hover {
+    background: transparent;
+  }
+}

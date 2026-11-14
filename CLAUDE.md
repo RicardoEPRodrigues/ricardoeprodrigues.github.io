@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-Personal website (colorcrow.me) built with Jekyll on the Indigo theme and served by GitHub Pages from the `gh-pages` branch. `gh-pages` is the default branch, and pushing to it deploys the site.
+Personal website (colorcrow.me) built with Jekyll (originally the Indigo theme, now a custom "Verdigris Codex" design) and served by GitHub Pages from the `gh-pages` branch. `gh-pages` is the default branch, and pushing to it deploys the site.
 
 ## Commands
 
@@ -27,5 +27,10 @@ Personal website (colorcrow.me) built with Jekyll on the Indigo theme and served
 
 ## Styling
 
-- Colours and the theme mode come from `_config.yml` (`accent-color`, `background`, `dark-theme`). They're injected into SCSS in `_layouts/default.html`.
-- Styles live in `_sass/` and `_includes/style*.scss`. Icons come from the Font Awesome kit script in `_layouts/default.html`.
+- The design source is `pencil/design.pen` (open it with the Pencil MCP tools, never read it directly). Keep the site and the design in step.
+- `assets/css/main.scss` is the stylesheet entry. It has front matter so Liquid can inject `accent-color`, `accent-color-dark`, `background`, `background-dark` and `dark-theme` from `_config.yml`. Every other colour is a CSS variable set in `_sass/codex/_tokens.scss`.
+- Partials live in `_sass/codex/`. GitHub Pages compiles them with Ruby Sass, so avoid CSS `min()`/`max()` (they clash with Sass functions).
+- Fonts: Grenze Gotisch (headings only), EB Garamond (text), Inter (small capitals), loaded from Google Fonts in `_layouts/default.html`. Social icons come from the Font Awesome kit, and UI glyphs from `_includes/icon.html`.
+- Decoration must come from layouts and CSS, never from content: the drop cap is `::first-letter` on the first paragraph of `.prose`, `##` headings get the gilt underline, and an image with a title becomes a captioned plate (small script in `_layouts/default.html`).
+- The woodcut crow is `assets/images/crow.svg`. It switches colours with `prefers-color-scheme` on its own.
+- Home page copy (kicker, intro, featured work, works list) is front matter in `index.md`, edited in the CMS as "Home Page". Roman numerals come from `_includes/roman.html`.
