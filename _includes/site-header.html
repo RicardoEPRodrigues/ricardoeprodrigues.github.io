@@ -24,7 +24,7 @@
             {% if site.about %}<li><a href="{{ site.url }}/about/"{% if current == "About" %} aria-current="page"{% endif %}>About</a></li>{% endif %}
             {% if site.resume %}
                 <li>
-                    <a class="btn" href="{% if site.resume-external %}{{ site.resume-url }}{% else %}{{ site.url }}/{{ site.resume-url }}{% endif %}">
+                    <a class="btn" href="{% if site.resume-external %}{{ site.resume-url }}{% else %}{{ site.url }}/{{ site.resume-url }}{% endif %}" target="_blank" rel="noopener" type="application/pdf">
                         {% include icon.html name="scroll" %}Résumé
                     </a>
                 </li>
