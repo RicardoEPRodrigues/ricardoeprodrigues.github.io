@@ -10,6 +10,11 @@ Personal website (colorcrow.me) built with Jekyll (originally the Indigo theme, 
 - `bundle exec rake`: run html-proofer on `_site/` (build first).
 - `bundle exec rake cv`: copy the CV from `CV_SOURCE` (default path is in the `Rakefile`) to `assets/uploads/cv-ricardo-rodrigues.pdf`. Keep that target filename stable, because `resume-url` points at it.
 
+## Git
+
+- Commit after each relevant change without asking. Never push: pushing `gh-pages` deploys the site, so the owner pushes.
+- Work on a branch, not directly on `gh-pages`. Keep experiments in their own commit so they're easy to revert.
+
 ## Constraints
 
 - The site is built by **GitHub Pages**, not by us. Only plugins on the Pages whitelist work, and Jekyll is pinned to 3.9 by the `github-pages` gem. Don't add plugins or Jekyll 4 features.
@@ -17,6 +22,7 @@ Personal website (colorcrow.me) built with Jekyll (originally the Indigo theme, 
 - `pagination.enabled` is `false` on purpose because `jekyll-paginate-v2` isn't supported on Pages.
 - `_config.yml` changes need a server restart to take effect.
 - The `compress` layout minifies HTML. Inline `//` JS comments in layouts or includes will break pages, so use `/* */`.
+- Inside `.prose`, link styles skip `.button` (`a:not(.button)`); keep it that way or buttons in posts turn green on green.
 
 ## Content
 
