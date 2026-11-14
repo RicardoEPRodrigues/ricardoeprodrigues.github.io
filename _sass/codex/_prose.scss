@@ -39,7 +39,6 @@
     margin: 0;
   }
 
-  h1,
   h2,
   h3 {
     @include display;
@@ -47,7 +46,28 @@
     scroll-margin-top: 24px;
   }
 
-  h1,
+  /* `# Heading` marks a group of sections (e.g. Roles / Projects on the Portfolio). */
+  h1 {
+    @include caps(13px);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: var(--accent);
+    margin: 72px 0 8px;
+
+    &::before,
+    &::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: var(--gold);
+    }
+  }
+
+  > h1:first-child {
+    margin-top: 0;
+  }
+
   h2 {
     font-size: 42px;
     color: var(--accent);

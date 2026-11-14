@@ -30,6 +30,8 @@ Personal website (colorcrow.me) built with Jekyll (originally the Indigo theme, 
 - Media goes in `assets/uploads/`, referenced as `/assets/uploads/...`.
 - Content is also edited through Netlify CMS (`admin/`, editorial workflow), which opens PRs from `cms/...` branches. If you rename front-matter fields or collections, update `admin/config.yml` to match.
 - `about.md` and `portfolio.md` are managed by the CMS as markdown bodies.
+- Each page has one job, so don't repeat the bio across them. Home is the short introduction, About is the person (story, teaching and community, "Why Colorcrow?"), and Portfolio is the work, grouped under `# Roles` and `# Projects`. The résumé is the full job history. The job title is "Senior Game Developer" everywhere (`_config.yml` bio and description, Home kicker, About).
+- In `.prose`, `# Heading` renders as a group divider (centred small capitals between gold lines), and `## Heading` as a blackletter section heading.
 
 ## Styling
 

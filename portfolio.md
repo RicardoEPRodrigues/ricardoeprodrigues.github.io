@@ -3,21 +3,15 @@ title: Portfolio
 layout: page
 kicker: Works & deeds
 ---
-I am **Ricardo Rodrigues**, a game developer and AI Engineer. I am passionate about games, playing them, and building them. Here are some of my works.
+Selected work: the roles I've held, then the projects I've built. The full history is in my [résumé]({{ site.url }}/{{ site.resume-url }}).
+
+# Roles
 
 ## iliAD
 
 I joined iliAD as a **Senior Game Developer** in October 2025. I work on technology that lets playable demos of new games run inside games that are already released. Much of my work is on streaming video, audio and data between servers and clients. That includes exploring, evaluating and integrating the frameworks and technologies behind those streaming and communication systems.
 
 The work spans a wide range of technologies, including Unreal Engine, Unity, C++, C#, Go, Python and TypeScript.
-
-## Comilito
-
-![Comilito with a sample project open: three scenes stacked in the Tapestry, the effects pad on the right and the Library underneath](/assets/uploads/comilito-screenshot.png "Comilito")
-
-**Comilito** is a personal project: a lightweight desktop soundboard and mixer for Dungeons & Dragons Dungeon Masters. Sounds are split into music, ambience and effects, and combined into scenes. During a session, scenes are stacked in the *Tapestry*, where higher scenes duck the ambience below them and the top-most scene decides which music plays. Projects save automatically, can be exported as a single file, and come with a searchable library, loudness normalisation, downloads from links and waveform cropping.
-
-It's built with [Tauri 2](https://tauri.app), with a **Rust** audio engine ([kira](https://github.com/tesselode/kira)) and a **Svelte**/TypeScript interface. It runs on Linux and Windows. I wrote more about it in [this blog post](/introducing-comilito/).
 
 ## Codfish Academy
 
@@ -43,6 +37,16 @@ One of my most fun components to develop was the context awareness modules, wher
 %}
 
 {% include button.html button_url='https://youmio.ai/' button_title='Visit Youmio' %}
+
+# Projects
+
+## Comilito
+
+![Comilito with a sample project open: three scenes stacked in the Tapestry, the effects pad on the right and the Library underneath](/assets/uploads/comilito-screenshot.png "Comilito")
+
+**Comilito** is a personal project: a lightweight desktop soundboard and mixer for Dungeons & Dragons Dungeon Masters. Sounds are split into music, ambience and effects, and combined into scenes. During a session, scenes are stacked in the *Tapestry*, where higher scenes duck the ambience below them and the top-most scene decides which music plays. Projects save automatically, can be exported as a single file, and come with a searchable library, loudness normalisation, downloads from links and waveform cropping.
+
+It's built with [Tauri 2](https://tauri.app), with a **Rust** audio engine ([kira](https://github.com/tesselode/kira)) and a **Svelte**/TypeScript interface. It runs on Linux and Windows. I wrote more about it in [this blog post](/introducing-comilito/).
 
 ## Adfectus
 
@@ -85,3 +89,11 @@ This project is being developed in the student club [Game Dev Técnico](https://
 I programmed part of the website and helped guide its development. Both this website and LabJogos' have a dark theme, making it a very interesting experience depending on your OS's theme.
 
 {% include button.html button_url='https://labjogos.tecnico.ulisboa.pt/' button_title='Visit LabJogos' %}
+
+## Sopa para Todos
+
+[Sopa para Todos](https://sopaparatodos.pt/) is a movement to help fight hunger and re-launch the catering business (restaurants, cafés, etc.) in Portugal, by inviting people to pay for a soup that is gifted to those who need it.
+
+I was **one of the founding members**. I built the website and the map of participating businesses, and looked after the servers and email.
+
+{% include button.html button_url='https://sopaparatodos.pt/' button_title='Visit Sopa para Todos' %}

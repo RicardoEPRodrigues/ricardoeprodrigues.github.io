@@ -1,9 +1,9 @@
 # main text of home
 title: Ricardo "Colorcrow" Rodrigues
-bio: AI Engineer and Game Developer.
+bio: Senior Game Developer.
 
 # twitter summary info
-description: AI Engineer and Game Developer
+description: Senior Game Developer
 
 # if it's an external image, update below for true
 # better with square images
@@ -53,7 +53,7 @@ email: ricardo@colorcrow.me
 authors:
   ricardorodrigues:
     name: Ricardo Rodrigues
-    bio: AI Engineer and Game Developer
+    bio: Senior Game Developer
     external-image: false
     picture: assets/uploads/profile.jpg
     twitter: Quenestil

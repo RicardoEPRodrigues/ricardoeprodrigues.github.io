@@ -3,21 +3,18 @@ title: About
 layout: page
 kicker: Of the author
 ---
+
 ![Profile Image]({% if site.external-image %}{{ site.picture }}{% else %}{{ site.url }}/{{ site.picture }}{% endif %})
 
-I am **Ricardo Rodrigues**, a game developer and AI Engineer. I am passionate about games, playing them, and building them.
+I am **Ricardo Rodrigues**, a Senior Game Developer at [iliAD]({{ site.url }}/portfolio/#iliad). I am passionate about games: playing them, and building them.
 
-With **over 8 years** of experience in **Affective Computing** and **Game Development**, my expertise includes game development with **Unreal Engine** and **Unity**, **C++** programming, and **creating emotionally expressive virtual agents** for various applications. I have strong leadership, communication, and technical abilities, as evidenced by coordinating projects, managing teams, and teaching game-related courses. Passionate about game development and AI, my versatile skill set and industry experience make me a valuable asset in the gaming sector.
+Most of my work sits where games meet artificial intelligence. I spent seven years, from 2017 to 2024, on a Ph.D. in **Affective Computing**, building game characters that feel and express emotion; you can read about [the thesis and its defense]({{ site.url }}/ph-d-thesis-and-defense/). At iliAD I work on streaming playable demos into games that are already released. Before that I worked as a Senior Unreal Engineer with [Codfish Academy]({{ site.url }}/portfolio/#codfish-academy) and as an AI engineer on [Youmio]({{ site.url }}/portfolio/#youmio). Most days that means **Unreal Engine**, **Unity** and **C++**.
 
-## Work Experience
+## Teaching and community
 
-* AI Engineer for the game [Youmio](https://youmio.ai/) at [Mr.Kite](https://mrkite.io/)
-* Teaching Assistant at [Técnico](https://tecnico.ulisboa.pt/)
-* Web Developer at [t_insight](https://www.tinsight.pt/)
-* Founding Member and Web Developer at [Sopa para Todos]({{site.url}}/projects/2022-05-05-sopa-para-todos/)
-* Game Developer on Research Projects - [Virtual Tutoring](https://sites.uab.pt/tutoria-virtual/) and [Festarola](https://www.researchgate.net/publication/336561569_Festarola_a_Game_for_Improving_Problem_Solving_Strategies)
-* Founding Member of [Game Dev Técnico](https://gamedev.tecnico.ulisboa.pt/)
-* Coordinator of [LabJogos Técnico](https://labjogos.tecnico.ulisboa.pt/)
+Alongside the work I've taught game-related courses as a Teaching Assistant at [Técnico](https://tecnico.ulisboa.pt/), co-founded the student club [Game Dev Técnico](https://gamedev.tecnico.ulisboa.pt/), and coordinated [LabJogos Técnico](https://labjogos.tecnico.ulisboa.pt/). I also built games for research projects such as [Virtual Tutoring](https://sites.uab.pt/tutoria-virtual/) and [Festarola](https://www.researchgate.net/publication/336561569_Festarola_a_Game_for_Improving_Problem_Solving_Strategies), worked as a web developer at [t_insight](https://www.tinsight.pt/), and helped found [Sopa para Todos]({{ site.url }}/projects/2022-05-05-sopa-para-todos/), a movement against hunger.
+
+The work itself is in the [portfolio]({{ site.url }}/portfolio/), and the full history is in my [résumé]({{ site.url }}/{{ site.resume-url }}).
 
 ## Why Colorcrow?
 

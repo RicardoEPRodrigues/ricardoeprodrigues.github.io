@@ -1,9 +1,9 @@
 ---
 layout: home
 title: Home
-kicker: AI Engineer · Game Developer
+kicker: Senior Game Developer · iliAD
 alias: also known as Colorcrow
-intro: I make games and the minds that live inside them. Senior Game Developer at iliAD, formerly an AI engineer on Youmio, with a Ph.D. on how virtual agents express emotion.
+intro: I make games and the minds that live inside them, with a Ph.D. in affective computing and past work as an AI engineer on Youmio.
 caption: Ex libris Colorcrow · MMXXII
 featured:
   title: Comilito
