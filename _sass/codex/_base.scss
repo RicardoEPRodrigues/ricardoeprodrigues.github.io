@@ -169,3 +169,9 @@ a {
 .crow {
   display: block;
 }
+
+/* A paragraph that opens with an illuminated initial grows to hold it, so a short opening
+   paragraph doesn't make the next one wrap around the square. */
+.has-initial {
+  display: flow-root;
+}

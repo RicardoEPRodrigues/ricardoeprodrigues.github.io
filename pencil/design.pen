@@ -5930,26 +5930,6 @@
                 },
                 {
                   "type": "icon",
-                  "id": "osaB0",
-                  "name": "Social twitter",
-                  "width": 20,
-                  "height": 20,
-                  "icon": "twitter",
-                  "library": "lucide",
-                  "fill": "$ink-text"
-                },
-                {
-                  "type": "icon",
-                  "id": "F5Cb36",
-                  "name": "Social twitch",
-                  "width": 20,
-                  "height": 20,
-                  "icon": "twitch",
-                  "library": "lucide",
-                  "fill": "$ink-text"
-                },
-                {
-                  "type": "icon",
                   "id": "r0Pir",
                   "name": "Social gamepad-2",
                   "width": 20,
@@ -6260,16 +6240,6 @@
                           "width": 20,
                           "height": 20,
                           "icon": "linkedin",
-                          "library": "lucide",
-                          "fill": "$muted"
-                        },
-                        {
-                          "type": "icon",
-                          "id": "c1Wsfe",
-                          "name": "Social twitter",
-                          "width": 20,
-                          "height": 20,
-                          "icon": "twitter",
                           "library": "lucide",
                           "fill": "$muted"
                         },
@@ -15292,16 +15262,6 @@
                         },
                         {
                           "type": "icon",
-                          "id": "YYuIf",
-                          "name": "Social twitter",
-                          "width": 20,
-                          "height": 20,
-                          "icon": "twitter",
-                          "library": "lucide",
-                          "fill": "$muted"
-                        },
-                        {
-                          "type": "icon",
                           "id": "HyqdY",
                           "name": "Social gamepad-2",
                           "width": 20,
@@ -16759,26 +16719,6 @@
                   "width": 20,
                   "height": 20,
                   "icon": "linkedin",
-                  "library": "lucide",
-                  "fill": "$ink-text"
-                },
-                {
-                  "type": "icon",
-                  "id": "H5mt4c",
-                  "name": "twitter",
-                  "width": 20,
-                  "height": 20,
-                  "icon": "twitter",
-                  "library": "lucide",
-                  "fill": "$ink-text"
-                },
-                {
-                  "type": "icon",
-                  "id": "QI8La",
-                  "name": "twitch",
-                  "width": 20,
-                  "height": 20,
-                  "icon": "twitch",
                   "library": "lucide",
                   "fill": "$ink-text"
                 },

@@ -21,22 +21,18 @@
     margin: 0 0 26px;
   }
 
-  /* The illuminated initial. When the body opens with an image on its own, it goes on the
-     paragraph after it. */
-  > p:first-child::first-letter,
-  > p:first-child:has(> img:only-child) + p::first-letter,
-  > figure:first-child + p::first-letter {
+  /* The illuminated initial (see _layouts/default.html for where it goes). */
+  .initial {
     @include illuminated;
-  }
 
-  > p:first-child:has(> img:only-child)::first-letter {
-    float: none;
-    font: inherit;
-    color: inherit;
-    background: none;
-    border: 0;
-    padding: 0;
-    margin: 0;
+    @media #{$phone} {
+      width: 4.4em;
+      height: 4.4em;
+
+      > span {
+        font-size: 3.7em;
+      }
+    }
   }
 
   h2,

@@ -42,12 +42,12 @@ disqus:
    categories: [blog, project] # only show disqus for posts that have these categories
 
 # if you don't have any of social below, comment the line
-twitter: Quenestil
+# twitter: Quenestil  # link hidden; uncomment to show it again
 linkedin: ricardoeprodrigues
 orcid: 0000-0003-0158-1460
 github: RicardoEPRodrigues
 itchio: colorcrow
-twitch: ricardoeprodrigues
+# twitch: ricardoeprodrigues  # link hidden; uncomment to show it again
 email: ricardo@colorcrow.me
 
 authors:

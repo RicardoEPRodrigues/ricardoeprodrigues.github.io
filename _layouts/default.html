@@ -54,6 +54,39 @@ layout: compress
             figure.appendChild(img);
             figure.appendChild(caption);
         });
+
+        /* The illuminated initial: wrap the first letter of the opening paragraph in a span.
+           An image alone at the top (or its figure) is skipped; anything else means no initial. */
+        document.querySelectorAll(".prose, .hero__bio").forEach(function (box) {
+            var p = null;
+            for (var el = box.firstElementChild; el; el = el.nextElementSibling) {
+                var onlyImage = el.tagName === "P" && el.children.length === 1 && el.firstElementChild.tagName === "IMG" && el.textContent.trim() === "";
+                if (el.tagName === "FIGURE" || onlyImage) { continue; }
+                if (el.tagName === "P") { p = el; }
+                break;
+            }
+            if (!p) { return; }
+            var walker = document.createTreeWalker(p, NodeFilter.SHOW_TEXT);
+            var node = walker.nextNode();
+            while (node && node.nodeValue.trim() === "") { node = walker.nextNode(); }
+            if (!node) { return; }
+            var match = node.nodeValue.match(/^(\s*)([A-Za-z\u00C0-\u024F0-9])/);
+            if (!match) { return; }
+            var rest = node.splitText(match[1].length);
+            rest.splitText(1);
+            var initial = document.createElement("span");
+            initial.className = "initial";
+            initial.setAttribute("aria-hidden", "true");
+            var letter = document.createElement("span");
+            letter.textContent = rest.nodeValue;
+            initial.appendChild(letter);
+            rest.parentNode.insertBefore(initial, rest);
+            p.classList.add("has-initial");
+            var hidden = document.createElement("span");
+            hidden.className = "visually-hidden";
+            hidden.textContent = rest.nodeValue;
+            rest.parentNode.replaceChild(hidden, rest);
+        });
     </script>
 </body>
 </html>
