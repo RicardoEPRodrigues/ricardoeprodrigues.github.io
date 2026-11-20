@@ -9,9 +9,15 @@ Selected work: the roles I've held, then the projects I've built. The full histo
 
 ## iliAD
 
-I joined iliAD as a **Senior Game Developer** in October 2025. I work on technology that lets playable demos of new games run inside games that are already released. Much of my work is on streaming video, audio and data between servers and clients. That includes exploring, evaluating and integrating the frameworks and technologies behind those streaming and communication systems.
+**[iliAD](https://ili-ad.com/)** builds *Playable Discovery*. A player in a PC game picks a tile and is straight into a streamed demo of another game, with nothing to download, and one button takes them back. Publishers use it to grow their other titles through the games people already play. The SDK is a lightweight plugin in the host game's Unity or Unreal build, and the demo runs on iliAD's servers and streams into the game. Its first public deployment is in StageTime by Virtuware, a social VR world on Meta Quest, whose arcade cabinets stream PC games from iliAD's cloud.
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/y3zGNUkir9M" title="iliAD SDK Explainer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+I joined iliAD as a **Senior Game Developer** in October 2025 and work on that technology. Much of my work is on streaming video, audio and data between servers and clients. That includes exploring, evaluating and integrating the frameworks and technologies behind those streaming and communication systems.
 
 The work spans a wide range of technologies, including Unreal Engine, Unity, C++, C#, Go, Python and TypeScript.
+
+{% include button.html button_url='https://ili-ad.com/' button_title='Visit iliAD' %}
 
 ## Codfish Academy
 
