@@ -23,3 +23,6 @@ I was lucky to present my work at the [Foundation of Digital Games 2023](http://
 To read more about the work, look at my research gate page.
 
 <https://www.researchgate.net/publication/369968848_Believability_Anticipation_and_Timing_Improving_believability_through_timing_manipulation>
+
+
+*Update: Adfectus now has its own website, [adfectus.colorcrow.me](https://adfectus.colorcrow.me), with the game, its emotion system and every devlog in one place.*

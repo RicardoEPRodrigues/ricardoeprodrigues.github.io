@@ -56,7 +56,9 @@ Adfectus is an arena game for 2 players to battle one another. Each player has a
 
 This game was developed in the context of my Ph.D. thesis and most of the development was done by me, with some help from master's students. One particularity of the game is the emotion system the characters use allowing them to feel emotions depending on how they perceive the battle to be going. Not reacting only to current stimuli, but also predicting how the battle will go based on previously collected data.
 
-<iframe src="https://itch.io/embed/654603?bg_color=eee&amp;fg_color=222222&amp;link_color=327345&amp;border_color=333835" width="552" height="167" frameborder="0"><a href="https://quenestil.itch.io/adfectus">Adfectus by Quenestil</a></iframe>
+<iframe src="https://itch.io/embed/654603?bg_color=eee&amp;fg_color=222222&amp;link_color=327345&amp;border_color=333835" width="552" height="167" frameborder="0"><a href="https://colorcrow.itch.io/adfectus">Adfectus by Colorcrow</a></iframe>
+
+{% include button.html button_url='https://adfectus.colorcrow.me' button_title='Visit the Adfectus website' %}
 
 ## 3Engine
 

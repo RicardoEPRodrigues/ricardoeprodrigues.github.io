@@ -24,6 +24,9 @@ I do not know when I will return to blogging more often, but I hope soon. It wil
 
 This is it for now, but I can leave you with something more substantial. I have published a newer version of **Adfectus** on itch.io. It adds tons of good stuff since my last update, including emoji-like facial expressions, a color outline for emotion expressions, overhead background to signal emotional changes, a new rage emotion expression, and the obligatory bug fixes.
 
-<iframe src="https://itch.io/embed/654603?bg_color=eee&amp;fg_color=222222&amp;link_color=327345&amp;border_color=333835" width="552" height="167" frameborder="0"><a href="https://quenestil.itch.io/adfectus">Adfectus by Quenestil</a></iframe>
+<iframe src="https://itch.io/embed/654603?bg_color=eee&amp;fg_color=222222&amp;link_color=327345&amp;border_color=333835" width="552" height="167" frameborder="0"><a href="https://colorcrow.itch.io/adfectus">Adfectus by Colorcrow</a></iframe>
 
 If you are interested in the game and would like to participate in future experiments on it, I invite you to [fill out this form](https://forms.gle/uALkPYyBV3Q99KE48).
+
+
+*Update: Adfectus now has its own website, [adfectus.colorcrow.me](https://adfectus.colorcrow.me), with the game, its emotion system and every devlog in one place.*

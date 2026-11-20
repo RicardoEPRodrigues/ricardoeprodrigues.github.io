@@ -19,3 +19,6 @@ While most of this work on [Adfectus]({{ site.url }}/projects/2021-07-27-adfectu
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/sjsV4uG3Eag" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Also, feel free to leave suggestions and questions if you have them.
+
+
+*Update: Adfectus now has its own website, [adfectus.colorcrow.me](https://adfectus.colorcrow.me), with the game, its emotion system and every devlog in one place.*

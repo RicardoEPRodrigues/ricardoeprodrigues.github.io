@@ -233,3 +233,6 @@ With this tutorial, we learned how to implement a simple combat mechanic based o
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/SZwQ8m-s7xs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 I hope this tutorial helps you and feel free to leave a comment with questions and suggestions.
+
+
+*Update: Adfectus now has its own website, [adfectus.colorcrow.me](https://adfectus.colorcrow.me), with the game, its emotion system and every devlog in one place.*

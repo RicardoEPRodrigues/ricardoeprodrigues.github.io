@@ -213,3 +213,6 @@ Because the weapon does not have any physics, it does not fall and just stays pu
 So, to wrap up, we first added the C++ code to associate and attach a Weapon Actor to a Character, then we created a Blueprint of a weapon (in the shape of a sword), and finally, we implemented simple mechanics that equip the nearest weapon to the character.
 
 As a personal note, this was quite a big undertaking for me, as I am new to this type of content, yet it is very rewarding to explain my work. Feel free to send suggestions and questions below!
+
+
+*Update: Adfectus now has its own website, [adfectus.colorcrow.me](https://adfectus.colorcrow.me), with the game, its emotion system and every devlog in one place.*

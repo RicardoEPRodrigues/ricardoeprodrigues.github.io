@@ -27,7 +27,7 @@ The responsibilities of my first role also meant that I wasn't able to be around
 
 ## Pre-Event
 
-In preparation for the event, it was necessary to step up a couple of things. First, build the game for different platforms, in my case Linux, Windows, and macOS, and upload them to [itch.io](https://quenestil.itch.io/adfectus). The build allows me to share the game online for anyone to play and also to have an easy way to download and install the game on any computer to showcase the game at the event (before the event I wasn't sure what computer I was going to use).
+In preparation for the event, it was necessary to step up a couple of things. First, build the game for different platforms, in my case Linux, Windows, and macOS, and upload them to [itch.io](https://colorcrow.itch.io/adfectus). The build allows me to share the game online for anyone to play and also to have an easy way to download and install the game on any computer to showcase the game at the event (before the event I wasn't sure what computer I was going to use).
 
 I also prepared a set of items to display at the booth: a poster, a controls cheatsheet, and a suggestion box (with paper and pens). I choose a clean and simple look and made use of game elements (3D and 2D) to design the items. All items also had a QR code that linked them to the [previous blog post "Adfectus at MOJO"](<{{ site.url }}/adfectus-at-mojo/>), this code allowed more people to more easily visit the website.
 
@@ -71,6 +71,9 @@ At the end of the day, no other noteworthy bugs were found, neither technical no
 
 In closing, while no response was received on the online form, the results of the event were positive. For the first time, **Adfectus received player feedback "in the wild" and it seemed players enjoyed it**. The game seems good enough to share around and if you want to play it click on the link below.
 
-<iframe src="https://itch.io/embed/654603?bg_color=eee&amp;fg_color=222222&amp;link_color=327345&amp;border_color=333835" width="552" height="167" frameborder="0"><a href="https://quenestil.itch.io/adfectus">Adfectus by Quenestil</a></iframe>
+<iframe src="https://itch.io/embed/654603?bg_color=eee&amp;fg_color=222222&amp;link_color=327345&amp;border_color=333835" width="552" height="167" frameborder="0"><a href="https://colorcrow.itch.io/adfectus">Adfectus by Colorcrow</a></iframe>
 
 Additionally, if you are interested in the game and would like to participate in future experiments on it, I invite you to [fill out this form](https://forms.gle/uALkPYyBV3Q99KE48).
+
+
+*Update: Adfectus now has its own website, [adfectus.colorcrow.me](https://adfectus.colorcrow.me), with the game, its emotion system and every devlog in one place.*
