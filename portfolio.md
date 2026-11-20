@@ -48,6 +48,8 @@ One of my most fun components to develop was the context awareness modules, wher
 
 It's built with [Tauri 2](https://tauri.app), with a **Rust** audio engine ([kira](https://github.com/tesselode/kira)) and a **Svelte**/TypeScript interface. It runs on Linux and Windows. I wrote more about it in [this blog post](/introducing-comilito/).
 
+{% include button.html button_url='https://comilito.colorcrow.me' button_title='Visit the Comilito website' %}
+
 ## Adfectus
 
 ![Adfectus Screenshot](https://img.itch.zone/aW1nLzM1MTU4MTEucG5n/original/WY5hbl.png "Adfectus")

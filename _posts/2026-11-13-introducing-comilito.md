@@ -58,3 +58,5 @@ I built Comilito with the help of AI (Claude, through Claude Code). I directed t
 Nothing has been released yet, as I'm still polishing the first version. Next on the list are a first-time experience for new users, choosing the audio output device, and eventually plugins. One idea I'd like to try is a plugin that plays a video for the top scene in a separate window.
 
 I'll post here when there's something to download.
+
+*Update: Comilito now has its own website, [comilito.colorcrow.me](https://comilito.colorcrow.me).*
