@@ -121,6 +121,9 @@ compress_html:
       - development
       - stage
 
+# Dot-folders are skipped by default; .well-known holds verification files (Flathub).
+include: [".well-known"]
+
 exclude:
   [
     "README.md",
